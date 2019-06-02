@@ -1,0 +1,69 @@
+# Welcome to Jekyll!
+title: Design Conversations
+email: mail@designconversations.com
+description: Dialogues with eminent Australian designers
+url: https://designconversations.net
+locale: en-AU
+lang: en-AU
+logo: /images/site-logo-dc.png
+date_format: "%B %-d, %Y"
+markdown: kramdown
+google_fonts:
+  - name: "Source Sans Pro"
+    weights: "400,400i,700,700i"
+  - name: "Volkhov"
+    weights: "400,400i,700,700i"
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .idea/
+  - src/
+footer_links:
+  - title: Feed
+    url: atom.xml
+    icon: fas fa-rss-square
+  - title: Twitter
+    url: https://twitter.com/designconv
+    icon: fab fa-twitter-square fa-2x
+  - title: Facebook
+    url: https://facebook.com/designconversations
+    icon: fab fa-facebook-square fa-2x
+  - title: Instagram
+    url: https://www.instagram.com/designconversations/
+    icon: fab fa-instagram fa-2x
+copyright: "&copy; 2017–2019 Geoff Fitzpatrick / Design Conversations &middot; [Privacy Policy](/privacy/)"
+permalink: /:categories/:year/:title/
+feed:
+  path: atom.xml
+liquid:
+  error_mode: strict
+sass:
+  sass_dir: _sass
+#disqus:
+#  shortname: # Disqus shortname, e.g. "my_disqus_shortname"
+twitter:
+  username: designconv
+author:
+  name: Geoff Fitzpatrick
+  picture: images/author_geoff_fitzpatrick.jpg
+  email: mail@designconversations.net
+  twitter: designconv
+# Custom
+matomo:
+  domain: sa.j13k.com
+  siteId: 16
+  goalIds:
+    newsletter: 1
+# Production build settings
+theme: ~
+remote_theme: mmistakes/so-simple-theme

@@ -1,0 +1,16 @@
+# Site navigation links
+
+ - title: Home
+   url: /
+
+ - title: Episodes
+   url: /episodes/
+
+ - title: Topics
+   url: /topics/
+
+ - title: About
+   url: /about/
+
+ - title: Search
+   url: /search/

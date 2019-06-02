@@ -1,0 +1,37 @@
+{%- assign guest = page.guest | default: page.guests[0] | default: site.guest -%}
+{%- assign guest = site.data.guests[guest] | default: guest -%}
+
+<div class="page-guest h-card p-guest">
+  {%- if guest.picture -%}
+    {%- if guest.picture contains "://" -%}
+      {%- assign guest_picture = guest.picture -%}
+    {%- else -%}
+      {%- assign guest_picture = guest.picture | relative_url -%}
+    {%- endif -%}
+    <img src="{{ guest_picture }}" class="guest-avatar u-photo" alt="{{ guest.name }}">
+  {%- endif -%}
+
+  <div class="guest-info">
+    {%- if guest.name -%}
+      <div class="guest-name">
+        <span class="p-name">{{ guest.name }}</span>
+      </div>
+    {%- endif -%}
+    {%- if guest.links -%}
+      <ul class="guest-links">
+        {%- for link in guest.links -%}
+          {%- if link.url contains "://" -%}
+            {%- assign url = link.url -%}
+          {%- else -%}
+            {%- assign url = link.url | relative_url -%}
+          {%- endif -%}
+          <li class="guest-link">
+            <a class="u-url" rel="me" href="{{ url }}"><i class="{{ link.icon | default : 'fas fa-link' }} fa-lg" title="{{ link.title }}"></i></a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+    {% if site.read_time %}{% include read-time.html %}{% endif %}
+    {% if page.date %}{% include page-date.html %}{% endif %}
+  </div>
+</div>

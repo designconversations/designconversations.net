@@ -1,0 +1,16 @@
+{
+  "name": "designconversations/podcast-generator",
+  "description": "Build tooling for generating podcast episode data from spreadsheet data",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "require": {
+    "adambrett/shell-wrapper": "dev-master",
+    "b-b3rn4rd/phplame": "dev-master",
+    "erusev/parsedown": "dev-master",
+    "league/climate": "dev-master",
+    "league/html-to-markdown": "^4.9@dev",
+    "phpoffice/phpspreadsheet": "^1.8",
+    "symfony/yaml": "^4.3",
+    "wapmorgan/mp3info": "dev-master"
+  }
+}
