@@ -3,6 +3,8 @@
 {% else %}
   {% assign title = entry.title %}
 {% endif %}
+{%- assign guest = entry.guest | default: entry.guests[0] | default: site.guest -%}
+{%- assign guest = site.data.guests[guest] | default: guest -%}
 
 <article class="entry h-entry">
   <header class="entry-header">
@@ -24,6 +26,16 @@
   </header>
   {% unless page.show_excerpts == false %}
     <div class="entry-excerpt p-summary">
+      <div class="page-guest h-card p-guest" style="float: right;">
+        {%- if guest.picture -%}
+          {%- if guest.picture contains "://" -%}
+            {%- assign guest_picture = guest.picture -%}
+          {%- else -%}
+            {%- assign guest_picture = guest.picture | relative_url -%}
+          {%- endif -%}
+          <img src="{{ guest_picture }}" class="guest-avatar u-photo" alt="{{ guest.name }}">
+        {%- endif -%}
+      </div>
       {% if entry.excerpt %}
         {{ entry.excerpt | markdownify }}
         <div class="more-link">
