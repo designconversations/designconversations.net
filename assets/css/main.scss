@@ -1,5 +1,4 @@
 ---
-sitemap: false
 ---
 
 @charset "utf-8";
@@ -15,6 +14,8 @@ $site-logo-height: 90px !default;
 @import "so-simple";
 // noinspection CssUnknownTarget
 @import "guest";
+// noinspection CssUnknownTarget
+@import "author";
 
 /* Site title (larger) */
 
@@ -25,68 +26,17 @@ $site-logo-height: 90px !default;
 /* Page title (smaller) */
 
 .page-title {
-  @include fluid-type($min-vw, $max-vw, 38px, 44px);
+  @include fluid-type($min-vw, $max-vw, 36px, 42px);
+}
+
+/* Entry title (smaller) */
+
+.entries-list .entry-title {
+  @include fluid-type($min-vw, $max-vw, 28px, 36px);
 }
 
 /* Site logo styles */
 
 .site-logo-img {
   border-radius: $site-logo-width / 3;
-}
-
-/* ==========================================================================
-   Mail Chimp form styles
-   ========================================================================== */
-
-#mc_embed_signup {
-  display: inline-block;
-  text-align: center;
-  font-size: 14px;
-}
-
-#mce-EMAIL {
-  display: inline-block;
-  width: 60%;
-  max-width: 350px;
-  margin: 4px 0px;
-  padding: 8px;
-  /*height: 44px;*/
-  font-size: 14px;
-}
-
-#mc_embed_signup_scroll .btn {
-  display: inline-block;
-  margin-bottom: 20px;
-  padding: 8px 20px;
-  font-size: 14px;
-  font-weight: normal;
-  background-color: $nav-background-color;
-  color: $nav-color;
-  border: 2px solid $nav-background-color !important;
-  border-radius: $border-radius;
-
-  &:visited {
-    color: $nav-color;
-  }
-
-  &:hover {
-    background-color: $nav-color;
-    color: $nav-background-color;
-  }
-}
-
-/* ==========================================================================
-   Author
-   ========================================================================== */
-
-.author-avatar {
-  //display: none;
-
-  //@include breakpoint($large) {
-  display: inline;
-  margin-bottom: 1em;
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-  //}
 }
