@@ -55,7 +55,7 @@ personally-identifying and personally-identifying information to anyone.
 
 If you are a registered user of *Design Conversations* newsletter and
 have supplied your email address, we may occasionally send you an email
-to tell you about new features, solicit your feedback, or just keep you
+to tell you about new episodes, solicit your feedback, or just keep you
 up to date with what’s going on with *Design Conversations*. We
 primarily use our website to communicate this type of information, so we
 expect to keep this type of email to a minimum.

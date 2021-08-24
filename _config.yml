@@ -45,7 +45,7 @@ footer_links:
   - title: Instagram
     url: https://www.instagram.com/designconversations/
     icon: fab fa-instagram fa-2x
-copyright: "&copy; 2017&ndash;2020 Geoff Fitzpatrick / Design Conversations &middot; [Privacy Policy](/privacy/)"
+copyright: "&copy; 2017&ndash;2021 Geoff Fitzpatrick / Design Conversations &middot; [Privacy Policy](/privacy/)"
 permalink: /:categories/:year/:title/
 feed:
   path: atom.xml
