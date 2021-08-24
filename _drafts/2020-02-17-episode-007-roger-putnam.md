@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Roger Putnam: Furniture Designer'
+title: '7 &#124; Roger Putnam: Furniture Designer'
 date: '2020-02-17'
 guest: roger_putnam
 categories: [Episodes]

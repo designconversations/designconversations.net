@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Max Robinson: London & beyond'
+title: '1 &#124; Max Robinson: London & beyond'
 date: '2017-05-19'
 guest: max_robinson
 categories: [Episodes]

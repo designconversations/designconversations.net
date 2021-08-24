@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Ted Worsley: Industrial designer & educator'
+title: '5 &#124; Ted Worsley: Industrial designer & educator'
 date: '2017-11-17'
 guest: ted_worsley
 categories: [Episodes]

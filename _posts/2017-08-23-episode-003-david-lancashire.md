@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'David Lancashire: Artist, designer & illustrator'
+title: '3 &#124; David Lancashire: Artist, designer & illustrator'
 date: '2017-08-23'
 guest: david_lancashire
 categories: [Episodes]

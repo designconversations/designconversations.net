@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Ian Howard: Aristoc & beyond'
+title: '2 &#124; Ian Howard: Aristoc & beyond'
 date: '2017-06-02'
 guest: ian_howard
 categories: [Episodes]

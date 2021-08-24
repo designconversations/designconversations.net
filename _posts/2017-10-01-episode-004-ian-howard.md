@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Ian Howard: International connections'
+title: '4 &#124; Ian Howard: International connections'
 date: '2017-10-01'
 guest: ian_howard
 categories: [Episodes]
