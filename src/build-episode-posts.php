@@ -3,32 +3,38 @@
 
 declare(strict_types=1);
 
+use League\CLImate\CLImate;
 use Psr\Log\LogLevel;
 use Symfony\Component\Yaml\Yaml;
 
 // Bootstrap
-$appLogChannel = 'build-episode-posts';
-$appTitle = 'Build Episode Posts';
 require __DIR__ . '/bootstrap.php';
+
+$appLogChannel = 'build-episode-posts';
+$logger = getLogger('debug', new CLImate(), 'Build Episode Posts');
+$episodeRecords = getEpisodeRecords($logger);
+
+// List episode data
+outputEpisodeData($episodeRecords, new CLImate());
 
 // Process episode data
 foreach ($episodeRecords as $i => $episodeRecord) {
     $logger->log(LogLevel::INFO, vsprintf('Processing episode %s', [$episodeRecord[F_EPISODE_ID]]));
 
     // File path
-    $postDir = realpath(__DIR__ . '/../' . ($episodeRecord[F_IS_DRAFT] ? '_drafts' : '_posts'));
-    $altPostDir = realpath(__DIR__ . '/../' . ($episodeRecord[F_IS_DRAFT] ? '_posts' : '_drafts'));
+    $postDir = realpath(__DIR__ . '/../' . ($episodeRecord[F_STATE] != 'Published' ? '_drafts' : '_posts'));
+    $altPostDir = realpath(__DIR__ . '/../' . ($episodeRecord[F_STATE] != 'Published' ? '_posts' : '_drafts'));
     $postFileName = getFormattedEpisodeName($episodeRecord, 'md');
     $postFilePath = $postDir . '/' . $postFileName;
     $altPostFilePath = $altPostDir . '/' . $postFileName;
 
     // Post front matter
     $frontMatter['layout'] = 'post';
-    $frontMatter['title'] = $episodeRecord[F_TITLE];
+    $frontMatter['title'] = "{$episodeRecord[F_EPISODE_ID]} &#124; {$episodeRecord[F_TITLE]}";
     $frontMatter['date'] = $episodeRecord[F_DATE];
     $frontMatter['guest'] = $episodeRecord[F_GUEST_ID];
     $frontMatter['categories'] = ['Episodes'];
-    $frontMatter['tags'] = explode(', ', $episodeRecord[F_TAGS]);
+    $frontMatter['tags'] = $episodeRecord[F_TAGS];
     $frontMatterStr = "---\n" . Yaml::dump($frontMatter, 1) . "---\n";
 
     // Main post content
@@ -41,13 +47,14 @@ foreach ($episodeRecords as $i => $episodeRecord) {
     }
     if (isset($episodeRecord[F_MP3_EMBED_URL]) && $episodeRecord[F_MP3_EMBED_URL]) {
         $content .= "Listen now:\n";
-        /** @noinspection HtmlUnknownTarget */
-        /** @noinspection HtmlDeprecatedAttribute */
         $content .= '<div class="responsive-embed" style="padding-top: 8%;">' . "\n";
-        $content .= vsprintf(
+        /** @noinspection HtmlUnknownTarget */
+        /** @noinspection HtmlUnknownAttribute */
+        /** @noinspection HtmlDeprecatedAttribute */
+        $content .= sprintf(
                 '  <iframe src="%s" class="responsive-embed-item" height="50" frameborder="0" '
                 . 'webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>',
-                [$episodeRecord[F_MP3_EMBED_URL]]
+                $episodeRecord[F_MP3_EMBED_URL]
             ) . "\n";
         $content .= '</div>' . "\n";
     }
