@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '7 &#124; Roger Putnam: Furniture Designer'
+title: '7 &#124; Roger Putnam: Furniture designer'
 date: '2020-02-17'
 guest: roger_putnam
 categories: [Episodes]
@@ -9,7 +9,17 @@ tags: [furniture-design, interior-design, gallery-consultancy, facilities-manage
 
 An influential figure in the field of furniture design and manufacture, Roger
 began his career in London in the sixties, as assistant to the renowned English
-designer Robin Day. 
+designer Robin Day. He trained at RMIT in Interior Design and did post graduate
+studies at the London College of Furniture, before returning to Australia.
+
+Roger's early work was in the design of furniture for the hospitality sector in
+Melbourne. He then worked for Kerby Furniture, manufacturers of high-end retail
+domestic furniture, before leaving to establish his own company, Sumna
+Furniture. His work included fit outs of the Savoy Plaza Hotel and the Adelphi
+Hotel, and later freelance work for the top design practices of the day. Roger's
+work in setting up the Tarrawarra Museum of Art, and his work in many galleries,
+such as Heidi, and McClelland Sculpture Gallery set a new direction for his
+design practice, which continues on today.
 
 In this episode he references Robin Day, Don Chapman, Colin Barrie, Lenton Parr,
 Parahran College of Art, Chris Palmer, Alan Kerr, Herman Miller, Sumna
