@@ -10,9 +10,11 @@
     "josegonzalez/dotenv": "dev-master",
     "league/climate": "dev-master",
     "league/html-to-markdown": "^4.9@dev",
-    "phpoffice/phpspreadsheet": "^1",
     "symfony/yaml": "^5",
     "wapmorgan/mp3info": "dev-master"
+  },
+  "require-dev": {
+    "symplify/easy-coding-standard": "dev-main"
   },
   "minimum-stability": "dev"
 }
