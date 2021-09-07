@@ -69,12 +69,13 @@ foreach ($episodeRecords as $i => $episodeRecord) {
             'date:' . $episodeRecord[F_DATE],
             'creator:' . $episodeArtist,
             'licenseurl:https://creativecommons.org/licenses/by-nc-nd/4.0/',
+            'subject:podcast',
+            'subject:design',
+            'subject:australia',
         ];
-        $subjectVal = 'subject:podcast;design;australia';
         foreach ($episodeTags as $tag) {
-            $subjectVal .= ';' . trim($tag);
+            $metadataValues[] = 'subject:' . trim($tag);
         }
-        $metadataValues[] = $subjectVal;
 
         // Build the command to upload
         $command = new CommandBuilder('/opt/homebrew/bin/ia');
@@ -99,8 +100,8 @@ foreach ($episodeRecords as $i => $episodeRecord) {
         $logger->debug($command);
 
         // Run the command
-//        $shell = new Exec();
-//        $shell->run($command);
+        $shell = new Exec();
+        $shell->run($command);
 
         $logger->info(vsprintf('File %s uploaded', [$mp3TagFilePath]));
     } catch (Exception $e) {
