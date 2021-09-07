@@ -13,16 +13,16 @@ The following tools follow the general pattern of reading episode data
 from the `episode-data.ods` spreadsheet, and processing each episode
 record in some way.
 
-`build-episode-posts.php` generates a Jekyll post page for each episode,
+`01-build-episode-posts.php` generates a Jekyll post page for each episode,
 including front-matter and page content.
 
-`encode-mp3s.php` loads a matching MP3 file for each episode record,
+`02-encode-mp3s.php` loads a matching MP3 file for each episode record,
 encoding it to a standard encoding specification.
 
-`tag-mp3s.php` loads an encoded MP3 file for each episode record, adding
+`03-tag-mp3s.php` loads an encoded MP3 file for each episode record, adding
 episode data as ID3 tags.
 
-`upload-mp3s.php` uploads encoded and tagged MP3 files for each episode
+`04-upload-mp3s.php` uploads encoded and tagged MP3 files for each episode
 record, if they haven't been uploaded already.
 
 ## To Do
@@ -36,9 +36,11 @@ record, if they haven't been uploaded already.
 
 ### Drafts
 
-- [ ] Episode 3
-- [ ] Episode 4
-- [ ] Episode 5
+- [x] Episode 3
+- [x] Episode 4
+- [x] Episode 5
+- [x] Episode 6
+- [ ] Episode 7
 
 ### Misc
 
