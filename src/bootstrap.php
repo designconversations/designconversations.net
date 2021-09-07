@@ -13,8 +13,8 @@ const F_SHOW_NOTES = 'showNotes';
 const F_MP3_EMBED_URL = 'mp3EmbedUrl';
 const F_PHOTO_CREDIT = 'photoCredit';
 
-const STATE_DRAFT='Draft';
-const STATE_PUBLISHED='Published';
+const STATE_DRAFT = 'Draft';
+const STATE_PUBLISHED = 'Published';
 
 const FORMAT_COMMENTS_OPTION_NONE = 0;
 const FORMAT_COMMENTS_OPTION_STRIP_PARAGRAPHS = 1;
@@ -69,7 +69,7 @@ function getEpisodeRecords(Logger $logger)
         F_PHOTO_CREDIT,
     ];
 
-// Config
+    // Config
     (new DotenvLoader('.env'))
         ->parse()
         ->toEnv();

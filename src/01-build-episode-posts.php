@@ -69,10 +69,10 @@ foreach ($episodeRecords as $i => $episodeRecord) {
         /** @noinspection HtmlUnknownAttribute */
         /** @noinspection HtmlDeprecatedAttribute */
         $content .= sprintf(
-                '  <iframe src="%s" class="responsive-embed-item" height="50" frameborder="0" '
+            '  <iframe src="%s" class="responsive-embed-item" height="50" frameborder="0" '
                 . 'webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>',
-                $episodeRecord[F_MP3_EMBED_URL]
-            ) . "\n";
+            $episodeRecord[F_MP3_EMBED_URL]
+        ) . "\n";
         $content .= '</div>' . "\n";
     }
     if (isset($episodeRecord[F_PHOTO_CREDIT]) && $episodeRecord[F_PHOTO_CREDIT]) {
