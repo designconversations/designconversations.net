@@ -20,9 +20,6 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 exclude:
-  - docker-compose.yml
-  - docker-entrypoint.sh
-  - Dockerfile
   - Gemfile
   - Gemfile.lock
   - node_modules

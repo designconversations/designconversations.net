@@ -48,8 +48,8 @@ for forty-five years, and served on the senior executive for several
 years, becoming the founding editor of Artichoke magazine and co-founder
 of the Colourways program.
 
-In 2005 and was inducted into the DIA Hall of Fame and later made a
-Design Ambassador. In 2017 he received an OAM for services to Industrial
+In 2005, he was inducted into the DIA Hall of Fame and later made a
+Design Ambassador. In 2017, he received an OAM for services to Industrial
 and Interior Design.
 
 ## Credits

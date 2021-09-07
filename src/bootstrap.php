@@ -13,10 +13,18 @@ const F_SHOW_NOTES = 'showNotes';
 const F_MP3_EMBED_URL = 'mp3EmbedUrl';
 const F_PHOTO_CREDIT = 'photoCredit';
 
+const STATE_DRAFT='Draft';
+const STATE_PUBLISHED='Published';
+
+const FORMAT_COMMENTS_OPTION_NONE = 0;
+const FORMAT_COMMENTS_OPTION_STRIP_PARAGRAPHS = 1;
+const FORMAT_COMMENTS_OPTION_FULLY_QUALIFY_LINKS = 2;
+
 use Armetiz\AirtableSDK\Airtable;
 use josegonzalez\Dotenv\Loader as DotenvLoader;
 use League\CLImate\CLImate;
 use League\CLImate\Logger;
+use League\HTMLToMarkdown\HtmlConverter;
 use Psr\Log\LogLevel;
 
 define('APP_DIR', realpath(__DIR__));
@@ -46,12 +54,27 @@ function getLogger(string $logLevel, CLImate $climate, string $appTitle): Logger
  */
 function getEpisodeRecords(Logger $logger)
 {
+    $fieldKeys = [
+        F_EPISODE_ID,
+        F_SEASON_NUM,
+        F_STATE,
+        F_DATE,
+        F_GUEST_ID,
+        F_TITLE,
+        F_TAGS,
+        F_SHOW_NOTES . '1',
+        F_SHOW_NOTES . '2',
+        F_SHOW_NOTES . '3',
+        F_MP3_EMBED_URL,
+        F_PHOTO_CREDIT,
+    ];
+
 // Config
-    $dotenvLoader = (new DotenvLoader('.env'))
+    (new DotenvLoader('.env'))
         ->parse()
         ->toEnv();
 
-// Load the episode data
+    // Load the episode data
     try {
         $airtable = new Airtable($_ENV['AIRTABLE_KEY'], $_ENV['AIRTABLE_BASE']);
         $records = $airtable->findRecords($_ENV['AIRTABLE_TABLE'], []);
@@ -60,14 +83,14 @@ function getEpisodeRecords(Logger $logger)
         exit(1);
     }
 
-// Extract episode data
+    // Extract episode data
     $episodeRecords = [];
     try {
         foreach ($records as $recordNum => $record) {
             $logger->info(vsprintf('Extracting data from row %s', [$recordNum]));
             $fields = $record->getFields();
-            foreach ($fields as $fieldId => $fieldVal) {
-                $episodeRecords[$fields['episodeId']][$fieldId] = $fieldVal;
+            foreach ($fieldKeys as $fieldId) {
+                $episodeRecords[$fields['episodeId']][$fieldId] = $fields[$fieldId] ?? null;
             }
         }
         ksort($episodeRecords);
@@ -78,7 +101,6 @@ function getEpisodeRecords(Logger $logger)
 
     return $episodeRecords;
 }
-
 
 // Output episode data
 /**
@@ -121,7 +143,7 @@ function getFormattedEpisodeName(array $episodeRecord, string $fileExtension = n
     $formattedEpisodeName .= vsprintf(
         '%s-episode-%03d-%s',
         [
-            $episodeRecord[F_DATE],
+            $episodeRecord[F_DATE] ?? 'TBC',
             $episodeRecord[F_EPISODE_ID],
             str_replace('_', '-', $episodeRecord[F_GUEST_ID]),
             $fileExtension,
@@ -132,4 +154,61 @@ function getFormattedEpisodeName(array $episodeRecord, string $fileExtension = n
     }
 
     return $formattedEpisodeName;
+}
+
+/**
+ * Formats episode title with number, separator and title.
+ *
+ * @param mixed       $episodeRecord
+ * @param string      $separator
+ * @param string|null $prefix
+ *
+ * @return string
+ */
+function formatEpisodeTitle(mixed $episodeRecord, string $separator, ?string $prefix = null): string
+{
+    $formattedEpisodeTitle = "{$episodeRecord[F_EPISODE_ID]} {$separator} {$episodeRecord[F_TITLE]}";
+    if ($prefix) {
+        $formattedEpisodeTitle = "{$prefix} {$formattedEpisodeTitle}";
+    }
+
+    return $formattedEpisodeTitle;
+}
+
+/**
+ * Formats episode notes in a single 'comment'.
+ *
+ * Used for ID3 tag and Internet Archive metadata content.
+ *
+ * @param array $episodeRecord
+ * @param int   $options
+ *
+ * @return string
+ */
+function formatEpisodeNotesAsComment(
+    array $episodeRecord,
+    int $options = FORMAT_COMMENTS_OPTION_NONE
+): string {
+    $episodeComment = '';
+    foreach ([1, 2, 3] as $showNoteNum) {
+        if (!$episodeRecord) {
+            continue;
+        }
+        $episodeComment .= $showNoteNum > 1 ? "\n\n" : '';
+        $episodeComment .= $episodeRecord[F_SHOW_NOTES . $showNoteNum];
+    }
+    // Convert comments to HTML, strip non-paragraphs and then convert back to Markdown
+    $markdownParser = new Parsedown();
+    $markdownConverter = new HtmlConverter();
+    $episodeCommentHtml = $markdownParser->parse($episodeComment);
+    if ($options & FORMAT_COMMENTS_OPTION_STRIP_PARAGRAPHS) {
+        $episodeCommentHtml = strip_tags($episodeCommentHtml, '<p>');
+    }
+    if ($options & FORMAT_COMMENTS_OPTION_FULLY_QUALIFY_LINKS) {
+        $episodeCommentHtml = str_replace('href="/', 'href="https://designconversations.net/', $episodeCommentHtml);
+    }
+    /** @noinspection PhpUnnecessaryLocalVariableInspection */
+    $episodeComment = $markdownConverter->convert($episodeCommentHtml);
+
+    return $episodeComment;
 }

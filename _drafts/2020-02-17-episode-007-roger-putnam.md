@@ -16,7 +16,7 @@ Parahran College of Art, Chris Palmer, Alan Kerr, Herman Miller, Sumna
 Furniture, Expo Solutions, Geoff Putnam, Maudie Palmer, Tarrawarra Museum of
 Art, McClelland Gallery, Design Ecru, Kjell Grant, Innerspace, Edward Alexander,
 Howard Arkley, Anthony Fitzpatrick, Victoria Lynne, Dame Elizabeth Murdock, Lisa
-Byrne, John Raul, Mary Featherston and Sue Carr
+Byrne, John Raul, Mary Featherston and Sue Carr.
 
 Listen now:
 <div class="responsive-embed" style="padding-top: 8%;">

@@ -5,18 +5,26 @@ declare(strict_types=1);
 
 use AdamBrett\ShellWrapper\Command\Builder as CommandBuilder;
 use AdamBrett\ShellWrapper\Runners\Exec;
-use League\HTMLToMarkdown\HtmlConverter;
+use League\CLImate\CLImate;
 use wapmorgan\Mp3Info\Mp3Info;
 
 // Bootstrap
-$appLogChannel = 'prepare-mp3s';
-$appTitle = 'Prepare MP3s';
-$logLevel = 'debug';
 require __DIR__ . '/bootstrap.php';
+
+$appLogChannel = 'prepare-mp3s';
+$logger = getLogger('debug', new CLImate(), 'Prepare MP3s');
+$episodeRecords = getEpisodeRecords($logger);
+
+// List episode data
+outputEpisodeData($episodeRecords, new CLImate());
 
 // Process episode MP3s
 foreach ($episodeRecords as $i => $episodeRecord) {
     $episodeId = $episodeRecord[F_EPISODE_ID];
+    if (!in_array($episodeRecord[F_STATE], [STATE_DRAFT, STATE_PUBLISHED])) {
+        $logger->info(sprintf('Skipping episode %d, state is %s', $episodeId, $episodeRecord[F_STATE]));
+        continue;
+    }
     $logger->info(vsprintf('Processing episode %s', [$episodeId]));
 
     // File paths
@@ -31,7 +39,8 @@ foreach ($episodeRecords as $i => $episodeRecord) {
         $mp3EncFileInfo = new Mp3Info($mp3EncFilePath, true);
     } catch (Exception $e) {
         $logger->error(vsprintf("Couldn't extract MP3 data: %s", [$e->getMessage()]));
-        exit(1);
+        continue;
+        //exit(1);
     }
 
     $logger->debug(json_encode($mp3EncFileInfo, JSON_UNESCAPED_SLASHES));
@@ -44,28 +53,15 @@ foreach ($episodeRecords as $i => $episodeRecord) {
         $episodeArtist = 'Geoff Fitzpatrick';
         $episodeAlbum = 'Design Conversations Podcast';
         $episodeGenre = 'Podcast';
-        $episodeReleaseYear = date('Y', strtotime($episodeRecord[F_DATE]));
+        $episodeReleaseYear = $episodeRecord[F_DATE] ? date('Y', strtotime($episodeRecord[F_DATE])) : null;
         $episodePublisher = 'DesignConversations.net';
         $episodeImagePathAndType = realpath(__DIR__ . '/mp3s/artwork.jpg') . ':BAND';
-        $episodeComment = '';
-        foreach ([1, 2, 3] as $showNoteNum) {
-            if (!$episodeRecord[F_SHOW_NOTES . $showNoteNum]) {
-                continue;
-            }
-            $episodeComment .= $showNoteNum > 1 ? "\n\n" : '';
-            $episodeComment .= $episodeRecord[F_SHOW_NOTES . $showNoteNum];
-        }
-        // Convert comments to HTML, strip non-paragraphs and then convert back to Markdown
-        $markdownParser = new Parsedown();
-        $markdownConverter = new HtmlConverter();
-        $episodeCommentHtml = $markdownParser->parse($episodeComment);
-        $episodeCommentHtml = strip_tags($episodeCommentHtml, '<p>');
-        $episodeComment = $markdownConverter->convert($episodeCommentHtml);
+        $episodeComment = formatEpisodeNotesAsComment($episodeRecord, FORMAT_COMMENTS_OPTION_STRIP_PARAGRAPHS);
 
         // Build the command to tag
-        $command = new CommandBuilder('/usr/local/bin/eyeD3');
+        $command = new CommandBuilder('/opt/homebrew/bin/eyeD3');
         $command
-            ->addArgument('title', $episodeRecord[F_TITLE])
+            ->addArgument('title', formatEpisodeTitle($episodeRecord, '|', 'Design Conversations Episode'))
             ->addArgument('artist', $episodeArtist)
             ->addArgument('album', $episodeAlbum)
             ->addArgument('album-artist', $episodeArtist)
@@ -87,7 +83,8 @@ foreach ($episodeRecords as $i => $episodeRecord) {
         $logger->info(vsprintf('File %s tagged', [$mp3EncFilePath]));
     } catch (Exception $e) {
         $logger->error(vsprintf("Couldn't tag MP3 file: %s", [$e->getMessage()]));
-        exit(1);
+        continue;
+        //exit(1);
     }
 
     // Grab MP3 info for output file
@@ -95,7 +92,8 @@ foreach ($episodeRecords as $i => $episodeRecord) {
         $mp3TagFileInfo = new Mp3Info($mp3EncFilePath, true);
     } catch (Exception $e) {
         $logger->error(vsprintf("Couldn't extract MP3 data: %s", [$e->getMessage()]));
-        exit(1);
+        continue;
+        //exit(1);
     }
 
     $logger->debug(json_encode($mp3TagFileInfo, JSON_UNESCAPED_SLASHES));

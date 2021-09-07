@@ -22,19 +22,36 @@ foreach ($episodeRecords as $i => $episodeRecord) {
     $logger->log(LogLevel::INFO, vsprintf('Processing episode %s', [$episodeRecord[F_EPISODE_ID]]));
 
     // File path
-    $postDir = realpath(__DIR__ . '/../' . ($episodeRecord[F_STATE] != 'Published' ? '_drafts' : '_posts'));
-    $altPostDir = realpath(__DIR__ . '/../' . ($episodeRecord[F_STATE] != 'Published' ? '_posts' : '_drafts'));
+    switch ($episodeRecord[F_STATE]) {
+        case STATE_PUBLISHED:
+            $postFolder = '_posts';
+            $altPostFolder = '_drafts';
+            break;
+        case STATE_DRAFT:
+            $postFolder = '_drafts';
+            $altPostFolder = '_posts';
+            break;
+        default:
+            $logger->log(
+                LogLevel::INFO,
+                sprintf('Skipping episode %s, status is %s', $episodeRecord[F_EPISODE_ID], $episodeRecord[F_STATE])
+            );
+            continue 2;
+    }
+    $postDir = realpath(__DIR__ . '/../' . $postFolder);
+    $altPostDir = realpath(__DIR__ . '/../' . $altPostFolder);
     $postFileName = getFormattedEpisodeName($episodeRecord, 'md');
     $postFilePath = $postDir . '/' . $postFileName;
     $altPostFilePath = $altPostDir . '/' . $postFileName;
 
     // Post front matter
     $frontMatter['layout'] = 'post';
-    $frontMatter['title'] = "{$episodeRecord[F_EPISODE_ID]} &#124; {$episodeRecord[F_TITLE]}";
-    $frontMatter['date'] = $episodeRecord[F_DATE];
+    $separator = "&#124;";
+    $frontMatter['title'] = formatEpisodeTitle($episodeRecord, $separator);
+    $frontMatter['date'] = $episodeRecord[F_DATE] ?? null;
     $frontMatter['guest'] = $episodeRecord[F_GUEST_ID];
     $frontMatter['categories'] = ['Episodes'];
-    $frontMatter['tags'] = $episodeRecord[F_TAGS];
+    $frontMatter['tags'] = $episodeRecord[F_TAGS] ?? [];
     $frontMatterStr = "---\n" . Yaml::dump($frontMatter, 1) . "---\n";
 
     // Main post content

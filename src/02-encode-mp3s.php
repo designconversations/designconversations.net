@@ -6,24 +6,34 @@ declare(strict_types=1);
 use Lame\Lame;
 use Lame\Settings\Encoding\Preset;
 use Lame\Settings\Settings;
+use League\CLImate\CLImate;
 use wapmorgan\Mp3Info\Mp3Info;
 
 // Bootstrap
-$appLogChannel = 'encode-mp3s';
-$appTitle = 'Encode MP3s';
 require __DIR__ . '/bootstrap.php';
+
+$appLogChannel = 'encode-mp3s';
+$logger = getLogger('debug', new CLImate(), 'Encode MP3s');
+$episodeRecords = getEpisodeRecords($logger);
+
+// List episode data
+outputEpisodeData($episodeRecords, new CLImate());
 
 // Set up encoder with 'radio' preset
 $lameEncodingPresetType = 'radio';
 $lameEncoding = new Preset();
 $lameEncoding->setType($lameEncodingPresetType);
 $lameSettings = new Settings($lameEncoding);
-$lame = new Lame('/usr/local/bin/lame', $lameSettings);
+$lame = new Lame('/opt/homebrew/bin/lame', $lameSettings);
 
 // Process episode MP3s
 foreach ($episodeRecords as $i => $episodeRecord) {
     $episodeId = $episodeRecord[F_EPISODE_ID];
-    $logger->info(vsprintf('Processing episode %s', [$episodeId]));
+    if (!in_array($episodeRecord[F_STATE], [STATE_DRAFT, STATE_PUBLISHED])) {
+        $logger->info(sprintf('Skipping episode %d, state is %s', $episodeId, $episodeRecord[F_STATE]));
+        continue;
+    }
+    $logger->info(vsprintf('Processing episode %d', [$episodeId]));
 
     // File paths
     $mp3FileName = getFormattedEpisodeName($episodeRecord, 'mp3');
@@ -42,7 +52,8 @@ foreach ($episodeRecords as $i => $episodeRecord) {
         $mp3OrigFileInfo = new Mp3Info($mp3OrigFilePath, true);
     } catch (Exception $e) {
         $logger->error(vsprintf("Couldn't extract MP3 data: %s", [$e->getMessage()]));
-        exit(1);
+        continue;
+        //exit(1);
     }
 
     $logger->debug(json_encode($mp3OrigFileInfo, JSON_UNESCAPED_SLASHES));
@@ -54,7 +65,8 @@ foreach ($episodeRecords as $i => $episodeRecord) {
         $logger->info(vsprintf('File encoded to %s', [$mp3EncFilePath]));
     } catch (Exception $e) {
         $logger->error(vsprintf("Couldn't encode MP3 file: %s", [$e->getMessage()]));
-        exit(1);
+        continue;
+        //exit(1);
     }
 
     // Grab MP3 info for output file
@@ -62,7 +74,8 @@ foreach ($episodeRecords as $i => $episodeRecord) {
         $mp3EncFileInfo = new Mp3Info($mp3EncFilePath, true);
     } catch (Exception $e) {
         $logger->error(vsprintf("Couldn't extract MP3 data: %s", [$e->getMessage()]));
-        exit(1);
+        continue;
+        //exit(1);
     }
 
     $logger->debug(json_encode($mp3EncFileInfo, JSON_UNESCAPED_SLASHES));

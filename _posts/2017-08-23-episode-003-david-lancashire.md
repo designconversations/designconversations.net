@@ -13,14 +13,14 @@ landscape design and mentoring. Lancashire’s career began in the UK where he
 received an exceptional grounding in illustration and commercial art before
 launching his almost sixty-year career in Australia.
 
-In this conversation he mentions John Henshaw, Bauhaus School, Hanna Babera,
+In this conversation he mentions John Henshaw, Bauhaus School, Hanna Barbera,
 Industrial Art Services, Arnold Radcliff, L.S. Loury, Yogi Bear, Marks &
-Spensers, Arne Associates, Di Lancashire, Sue Ford, Joy Hirst, Jane Connery,
+Spencer, Arne Associates, Di Lancashire, Sue Ford, Joy Hirst, Jane Connery,
 Practical Puffins, Di Gribble, Di Brtant, David Wilken, Olgivie Mather, Les
-Mason, Liverpool Pol;ytech, David Mattingly, Safeway, Jeff Forsyth Jeff
-Boroughs, Man From Snowy River,  Barry Humphries, John Dixon, Les Patterson
-Rides Again, Max Robinson, Sydney Nolen, Joy Hester, JAG, Rob Palmer, Adel
-Palmer, Cogee, Sportsgirl,
+Mason, Liverpool Polytech, David Mattingly, Safeway, Jeff Forsyth Jeff Boroughs,
+Man From Snowy River,  Barry Humphries, John Dixon, Les Patterson Rides Again,
+Max Robinson, Sydney Nolen, Joy Hester, JAG, Rob Palmer, Adel Palmer, Cogee,
+Sportsgirl,
 
 Listen now:
 <div class="responsive-embed" style="padding-top: 8%;">

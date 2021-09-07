@@ -14,7 +14,7 @@ the preeminent commercial furniture company in Australia in the 1970s. Howard
 established design activity at the centre of his enterprises, with the hiring of
 designers such as Grant Featherston and Fred Lowen.
 
-In this detailed conversation, Howard discuss his engagement with his uncle
+In this detailed conversation, Howard discusses his engagement with his uncle
 William Oyston, Charles Eames, Mary Featherston, Gerald Easden, Robin Day,
 Terence Conran, Alexander Girard, Harry Sebel, Robin Boyd, Derek Wrigley, Ted
 Worsley and Colin Barrie.
