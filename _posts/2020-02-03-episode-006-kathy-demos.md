@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '6 &#124; Kathy Demos: Design Director'
+title: '6 &#124; Kathy Demos: Design director'
 date: '2020-02-03'
 guest: kathy_demos
 categories: [Episodes]
