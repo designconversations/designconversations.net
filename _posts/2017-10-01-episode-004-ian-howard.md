@@ -14,10 +14,10 @@ the preeminent commercial furniture company in Australia in the 1970s. Howard
 established design activity at the centre of his enterprises, with the hiring of
 designers such as Grant Featherston and Fred Lowen.
 
-Dowd, Mike Stokes, Patti Stitt, Slow Design, Bill Neijie, Glen Murcott, Phil
-Harris, Troppo, Peter Stutchbury, Virginia Trioli, Peace Roo, Kathy Freeman,
-AGDA/DIA, Richard Henderson, John Harrison, Taylor,Cullity, Lethlean, Shop for
-Shop.
+In this detailed conversation, Howard discusses his engagement with his uncle
+William Oyston, Charles Eames, Mary Featherston, Gerald Easden, Robin Day,
+Terence Conran, Alexander Girard, Harry Sebel, Robin Boyd, Derek Wrigley, Ted
+Worsley and Colin Barrie.
 
 An earlier conversation with Ian can be heard in [Episode
 2](/episodes/2017/episode-002-ian-howard/).

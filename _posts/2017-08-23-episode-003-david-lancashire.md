@@ -20,7 +20,10 @@ Practical Puffins, Di Gribble, Di Brtant, David Wilken, Olgivie Mather, Les
 Mason, Liverpool Polytech, David Mattingly, Safeway, Jeff Forsyth Jeff Boroughs,
 Man From Snowy River,  Barry Humphries, John Dixon, Les Patterson Rides Again,
 Max Robinson, Sydney Nolen, Joy Hester, JAG, Rob Palmer, Adel Palmer, Cogee,
-Sportsgirl,
+Sportsgirl, Dowd, Mike Stokes, Patti Stitt, Slow Design, Bill Neijie, Glen
+Murcott, Phil Harris, Troppo, Peter Stutchbury, Virginia Trioli, Peace Roo,
+Kathy Freeman, AGDA/DIA, Richard Henderson, John Harrison, Taylor,Cullity,
+Lethlean, Shop for Shop.
 
 Listen now:
 <div class="responsive-embed" style="padding-top: 8%;">
