@@ -10,11 +10,11 @@ tags: [art, graphic-design, illustration, writing]
 A contemporary artist and graphic designer, a poet and prose writer, Max
 Robinson had a sixty-plus year career in the UK and Australia. Renowned for his
 design work on numerous record covers for World Record Club and his contribution
-on the decimal currency council with Gordon Andrews and Harry Williamson,
-Robinson was also the designer of Australia’s first ten-dollar note.
+on the decimal currency council with Gordon Andrews and Harry Williamson, Max
+was also the designer of Australia’s first ten-dollar note.
 
-In this conversation he reflects on his early friendship and work with Barry
-Humphries in Melbourne, and later in London. Robinson recalls encounters with
+In this conversation Max reflects on his early friendship and work with Barry
+Humphries in Melbourne, and later in London. He also recalls encounters with
 many notable friends such as Mimmo Cozzolino, Gordon Andrews, Harry Williamson,
 Brian Sadgrove, Morris Lurie, Max Forbes, Clem Meadmore, Jimmy Haughton James
 and Peter Atkins.

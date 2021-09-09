@@ -10,7 +10,7 @@ tags: [design-management]
 A renowned leader in the field of furniture manufacture and design, Ian Howard
 was the Founder and Managing Director of Aristoc Furniture in mid century
 Melbourne; he then established Herman Miller Australia, and finally Co Design,
-the preeminent commercial furniture company in Australia in the 1970s. Howard
+the preeminent commercial furniture company in Australia in the 1970s. Ian
 established design activity at the centre of his enterprises, with the hiring of
 designers such as Grant Featherston and Fred Lowen.
 
