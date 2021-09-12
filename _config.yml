@@ -66,5 +66,5 @@ matomo:
   goalIds:
     newsletter: 1
 # Production build settings
-theme: ~
-remote_theme: mmistakes/so-simple-theme
+theme: jekyll-theme-so-simple
+remote_theme: ~
