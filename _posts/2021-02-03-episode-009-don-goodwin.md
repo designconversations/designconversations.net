@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '9 &#124; Don Goodwin: Conran Design Director'
+title: '9 &#124; Don Goodwin: Conran design director'
 date: '2021-02-03'
 guest: don_goodwin
 categories: [Episodes]
