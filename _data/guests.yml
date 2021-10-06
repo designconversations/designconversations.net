@@ -16,3 +16,9 @@ kathy_demos:
 roger_putnam:
   name: Roger Putnam
   picture: /images/guest_roger_putnam.jpg
+robert_miller_smith:
+  name: Robert Miller Smith
+  picture: /images/guest_robert_miller_smith.jpg
+don_goodwin:
+  name: Don Goodwin
+  picture: /images/guest_don_goodwin.jpg
