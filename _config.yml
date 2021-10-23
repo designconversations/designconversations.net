@@ -23,6 +23,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - Makefile
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
@@ -42,7 +43,11 @@ footer_links:
   - title: Instagram
     url: https://www.instagram.com/designconversations/
     icon: fab fa-instagram fa-2x
-copyright: "&copy; 2017&ndash;2021 Geoff Fitzpatrick / Design Conversations &middot; [Privacy Policy](/privacy/)"
+copyright: >
+  [![Creative Commons License](https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-nd/4.0/)<br />
+  Except where [otherwise noted](/about/#credits), content on this site is licensed under a<br />
+  [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).<br />
+  [Privacy Policy](/privacy/)
 permalink: /:categories/:year/:title/
 feed:
   path: atom.xml
@@ -68,3 +73,24 @@ matomo:
 # Production build settings
 theme: jekyll-theme-so-simple
 remote_theme: ~
+# Podcast-specific settings
+podcast:
+  copyright: >
+    Except where otherwise noted, content is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives
+    4.0 International License.
+  description: >
+    <p>Design Conversations is a podcast series aimed at recording an oral history of designers and design practices in
+    Australia, from the twentieth century to the present day.</p>
+    <p>Each episode is a one-on-one conversation with an eminent design practitioner, in which they detail and elaborate
+    on their careers. The series strives to cover most of the design disciplines currently practiced, and examine the
+    motivation, inspiration and hard work that brought recognition.</p>
+  itunes:
+    author: Geoff Fitzpatrick
+    owner:
+      name: Geoff Fitzpatrick
+      email: mail@designconversations.net
+    type: episodic
+    image: "images/site-logo-dc-itunes.png"
+    category: Arts
+    subcategory: Design
+    explicit: "false"

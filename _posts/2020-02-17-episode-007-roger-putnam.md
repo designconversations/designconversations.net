@@ -3,8 +3,25 @@ layout: post
 title: '7 &#124; Roger Putnam: Furniture designer'
 date: '2020-02-17'
 guest: roger_putnam
-categories: [Episodes]
-tags: [furniture-design, interior-design, gallery-consultancy, facilities-management]
+categories:
+  - Episodes
+tags:
+  - furniture-design
+  - interior-design
+  - gallery-consultancy
+  - facilities-management
+podcast:
+  itunes:
+    episodeType: full
+    episode: 7
+    season: 2020
+    title: 'Roger Putnam: Furniture designer'
+    duration: 1864
+    explicit: 'false'
+    block: 'false'
+  length: 25834937
+  type: audio/mpeg
+  url: 'https://archive.org/download/designconv-2020-02-17-episode-007-roger-putnam/2020-02-17-episode-007-roger-putnam.mp3'
 ---
 
 An influential figure in the field of furniture design and manufacture, Roger
@@ -30,5 +47,6 @@ Byrne, John Raul, Mary Featherston and Sue Carr.
 
 Listen now:
 <div class="responsive-embed" style="padding-top: 8%;">
+  <!--suppress HtmlUnknownAttribute, HtmlDeprecatedAttribute -->
   <iframe src="https://archive.org/embed/designconv-2020-02-17-episode-007-roger-putnam" class="responsive-embed-item" height="50" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 </div>

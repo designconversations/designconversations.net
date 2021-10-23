@@ -6,6 +6,7 @@ declare(strict_types=1);
 use League\CLImate\CLImate;
 use Psr\Log\LogLevel;
 use Symfony\Component\Yaml\Yaml;
+use wapmorgan\Mp3Info\Mp3Info;
 
 // Bootstrap
 require __DIR__ . '/bootstrap.php';
@@ -52,7 +53,32 @@ foreach ($episodeRecords as $i => $episodeRecord) {
     $frontMatter['guest'] = $episodeRecord[F_GUEST_ID];
     $frontMatter['categories'] = ['Episodes'];
     $frontMatter['tags'] = $episodeRecord[F_TAGS] ?? [];
-    $frontMatterStr = "---\n" . Yaml::dump($frontMatter, 1) . "---\n";
+    $episodeMp3Info = null;
+    try {
+        $episodeMp3Info = getEpisodeMp3Info($episodeRecord);
+    } catch (Exception $e) {
+        $logger->warning(vsprintf("Couldn't extract MP3 data: %s", [$e->getMessage()]));
+        //continue;
+    }
+    $frontMatter['podcast'] = [
+        'itunes' => [
+            'episodeType' => 'full',
+            'episode' => $episodeRecord[F_EPISODE_ID],
+            'season' => $episodeRecord[F_SEASON_NUM],
+            'title' => $episodeRecord[F_TITLE],
+            'duration' => $episodeMp3Info instanceof Mp3Info ? (int) round($episodeMp3Info->duration) : 0,
+            'explicit' => 'false',
+            'block' => 'false',
+        ],
+        'length' => $episodeMp3Info instanceof Mp3Info ? (int) $episodeMp3Info->_fileSize : 0,
+        'type' => 'audio/mpeg',
+        'url' => sprintf(
+            "https://archive.org/download/%s/%s",
+            getFormattedEpisodeName($episodeRecord, null, 'designconv'),
+            getFormattedEpisodeName($episodeRecord, 'mp3')
+        ),
+    ];
+    $frontMatterStr = "---\n" . Yaml::dump($frontMatter, 3, 2) . "---\n";
 
     // Main post content
     $content = '';
@@ -65,6 +91,7 @@ foreach ($episodeRecords as $i => $episodeRecord) {
     if (isset($episodeRecord[F_MP3_EMBED_URL]) && $episodeRecord[F_MP3_EMBED_URL]) {
         $content .= "Listen now:\n";
         $content .= '<div class="responsive-embed" style="padding-top: 8%;">' . "\n";
+        $content .= "  <!--suppress HtmlUnknownAttribute, HtmlDeprecatedAttribute -->\n";
         /** @noinspection HtmlUnknownTarget */
         /** @noinspection HtmlUnknownAttribute */
         /** @noinspection HtmlDeprecatedAttribute */

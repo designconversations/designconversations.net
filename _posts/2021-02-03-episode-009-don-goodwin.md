@@ -3,8 +3,25 @@ layout: post
 title: '9 &#124; Don Goodwin: Conran design director'
 date: '2021-02-03'
 guest: don_goodwin
-categories: [Episodes]
-tags: [industrial-design, graphic-design, illustration, design-management]
+categories:
+  - Episodes
+tags:
+  - industrial-design
+  - graphic-design
+  - illustration
+  - design-management
+podcast:
+  itunes:
+    episodeType: full
+    episode: 9
+    season: 2021
+    title: 'Don Goodwin: Conran design director'
+    duration: 5195
+    explicit: 'false'
+    block: 'false'
+  length: 59227378
+  type: audio/mpeg
+  url: 'https://archive.org/download/designconv-2021-02-03-episode-009-don-goodwin/2021-02-03-episode-009-don-goodwin.mp3'
 ---
 
 Don Goodwin played a significant design role as an Associate Director of the
@@ -24,5 +41,6 @@ Kenji Ekuan, and Marco Zanusso.
 
 Listen now:
 <div class="responsive-embed" style="padding-top: 8%;">
+  <!--suppress HtmlUnknownAttribute, HtmlDeprecatedAttribute -->
   <iframe src="https://archive.org/embed/designconv-2021-02-03-episode-009-don-goodwin" class="responsive-embed-item" height="50" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 </div>

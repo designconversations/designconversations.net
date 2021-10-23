@@ -26,6 +26,7 @@ use League\CLImate\CLImate;
 use League\CLImate\Logger;
 use League\HTMLToMarkdown\HtmlConverter;
 use Psr\Log\LogLevel;
+use wapmorgan\Mp3Info\Mp3Info;
 
 define('APP_DIR', realpath(__DIR__));
 
@@ -211,4 +212,21 @@ function formatEpisodeNotesAsComment(
     $episodeComment = $markdownConverter->convert($episodeCommentHtml);
 
     return $episodeComment;
+}
+
+/**
+ * Gets the MP3 information for an episode.
+ *
+ * @param array  $episodeRecord
+ * @param string $origOrEnc get the info for the 'orig' or 'enc' MP3; defaults to 'enc'
+ *
+ * @return Mp3Info
+ * @throws Exception
+ */
+function getEpisodeMp3Info(array $episodeRecord, string $origOrEnc = 'enc'): Mp3Info
+{
+    $mp3FileName = getFormattedEpisodeName($episodeRecord, 'mp3');
+    $realpath = realpath(__DIR__ . '/mp3s/' . $origOrEnc);
+    $filename = $realpath . "/" . $mp3FileName;
+    return new Mp3Info($filename, true);
 }

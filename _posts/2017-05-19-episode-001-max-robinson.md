@@ -3,8 +3,25 @@ layout: post
 title: '1 &#124; Max Robinson: London & beyond'
 date: '2017-05-19'
 guest: max_robinson
-categories: [Episodes]
-tags: [art, graphic-design, illustration, writing]
+categories:
+  - Episodes
+tags:
+  - art
+  - graphic-design
+  - illustration
+  - writing
+podcast:
+  itunes:
+    episodeType: full
+    episode: 1
+    season: 2017
+    title: 'Max Robinson: London & beyond'
+    duration: 2791
+    explicit: 'false'
+    block: 'false'
+  length: 35430664
+  type: audio/mpeg
+  url: 'https://archive.org/download/designconv-2017-05-19-episode-001-max-robinson/2017-05-19-episode-001-max-robinson.mp3'
 ---
 
 A contemporary artist and graphic designer, a poet and prose writer, Max
@@ -21,6 +38,7 @@ and Peter Atkins.
 
 Listen now:
 <div class="responsive-embed" style="padding-top: 8%;">
+  <!--suppress HtmlUnknownAttribute, HtmlDeprecatedAttribute -->
   <iframe src="https://archive.org/embed/designconv-2017-05-19-episode-001-max-robinson" class="responsive-embed-item" height="50" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 </div>
 

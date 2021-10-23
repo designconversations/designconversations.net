@@ -3,8 +3,24 @@ layout: post
 title: '6 &#124; Kathy Demos: Design director'
 date: '2020-02-03'
 guest: kathy_demos
-categories: [Episodes]
-tags: [interior-design, product-design, design-direction]
+categories:
+  - Episodes
+tags:
+  - interior-design
+  - product-design
+  - design-direction
+podcast:
+  itunes:
+    episodeType: full
+    episode: 6
+    season: 2020
+    title: 'Kathy Demos: Design director'
+    duration: 2801
+    explicit: 'false'
+    block: 'false'
+  length: 38826411
+  type: audio/mpeg
+  url: 'https://archive.org/download/designconv-2020-02-03-episode-006-kathy-demos/2020-02-03-episode-006-kathy-demos.mp3'
 ---
 
 One of the most influential figures in Australian design, Kathy Demos has been
@@ -31,5 +47,6 @@ National Design Centre, Stanley Leakos, and Peter Seamer.
 
 Listen now:
 <div class="responsive-embed" style="padding-top: 8%;">
+  <!--suppress HtmlUnknownAttribute, HtmlDeprecatedAttribute -->
   <iframe src="https://archive.org/embed/designconv-2020-02-03-episode-006-kathy-demos" class="responsive-embed-item" height="50" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 </div>
