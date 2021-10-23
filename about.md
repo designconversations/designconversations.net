@@ -54,8 +54,8 @@ and Interior Design.
 
 ## Credits
 
+**Logo:** etc. graphic design<br />
+**Music:** *C’est La Vie* by Tristan Barton &#169; PremiumBeat<br />
+**Website:** Jekyll & So Simple<br />
 **Audio production:** Liam Fitzpatrick<br />
 **Technical production:** John Fitzpatrick<br />
-**Logo design:** etc. graphic design<br />
-**Music:** *C’est La Vie* by Tristan Barton<br />
-**Website:** Jekyll & So Simple<br />

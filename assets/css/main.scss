@@ -40,3 +40,14 @@ $site-logo-height: 90px !default;
 .site-logo-img {
   border-radius: $site-logo-width / 3;
 }
+
+/* Copyright styles */
+
+.copyright {
+  font-size: 0.7rem;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}

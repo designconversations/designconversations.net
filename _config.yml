@@ -42,7 +42,11 @@ footer_links:
   - title: Instagram
     url: https://www.instagram.com/designconversations/
     icon: fab fa-instagram fa-2x
-copyright: "&copy; 2017&ndash;2021 Geoff Fitzpatrick / Design Conversations &middot; [Privacy Policy](/privacy/)"
+copyright: >
+  [![Creative Commons License](https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-nd/4.0/)<br />
+  Except where [otherwise noted](/about/#credits), content on this site is licensed under a<br />
+  [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).<br />
+  [Privacy Policy](/privacy/)
 permalink: /:categories/:year/:title/
 feed:
   path: atom.xml
