@@ -26,6 +26,9 @@
       <itunes:category text="{{ site.podcast.itunes.subcategory }}"/>
     </itunes:category>
     <itunes:explicit>{{ site.podcast.itunes.explicit }}</itunes:explicit>
+    <!-- Undocumented -->
+    <itunes:subtitle>{{ site.description | xml_escape }}</itunes:subtitle>
+    <itunes:summary>{{ site.podcast.description | strip_html | normalize_whitespace }}</itunes:summary>
     {% for post in site.posts %}<item>
       <itunes:episodeType>{{ post.podcast.itunes.episodeType }}</itunes:episodeType>
       <itunes:episode>{{ post.podcast.itunes.episode }}</itunes:episode>
@@ -47,9 +50,11 @@
         url="{{ post.podcast.url }}"
       />
       <itunes:duration>{{ post.podcast.itunes.duration }}</itunes:duration>
-      <!--<itunes:keywords>{{ post.tags | join: "," }}</itunes:keywords>-->
       <itunes:explicit>{{ post.podcast.itunes.explicit }}</itunes:explicit>
       <itunes:block>{{ post.podcast.itunes.block }}</itunes:block>
+      <!-- Undocumented -->
+      <itunes:summary>{{ post.excerpt | strip_html | normalize_whitespace }}</itunes:summary>
+      <itunes:keywords>{{ post.tags | join: "," }}</itunes:keywords>
     </item>{% endfor %}
   </channel>
 </rss>
