@@ -3,8 +3,25 @@ layout: post
 title: '3 &#124; David Lancashire: Artist, designer & illustrator'
 date: '2017-08-23'
 guest: david_lancashire
-categories: [Episodes]
-tags: [art, graphic-design, illustration, landscape-design]
+categories:
+  - Episodes
+tags:
+  - art
+  - graphic-design
+  - illustration
+  - landscape-design
+podcast:
+  itunes:
+    episodeType: full
+    episode: 3
+    season: 2017
+    title: 'David Lancashire: Artist, designer & illustrator'
+    duration: 2219
+    explicit: 'false'
+    block: 'false'
+  length: 30546120
+  type: audio/mpeg
+  url: 'https://archive.org/download/designconv-2017-08-23-episode-003-david-lancashire/2017-08-23-episode-003-david-lancashire.mp3'
 ---
 
 A major artist and graphic designer, David Lancashire is still working in his
@@ -27,5 +44,6 @@ Cullity Lethlean and Shop for Shop.
 
 Listen now:
 <div class="responsive-embed" style="padding-top: 8%;">
+  <!--suppress HtmlUnknownAttribute, HtmlDeprecatedAttribute -->
   <iframe src="https://archive.org/embed/designconv-2017-08-23-episode-003-david-lancashire" class="responsive-embed-item" height="50" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 </div>

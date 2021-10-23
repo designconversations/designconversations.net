@@ -3,8 +3,22 @@ layout: post
 title: '4 &#124; Ian Howard: International connections'
 date: '2017-10-01'
 guest: ian_howard
-categories: [Episodes]
-tags: [design-management]
+categories:
+  - Episodes
+tags:
+  - design-management
+podcast:
+  itunes:
+    episodeType: full
+    episode: 4
+    season: 2017
+    title: 'Ian Howard: International connections'
+    duration: 2814
+    explicit: 'false'
+    block: 'false'
+  length: 36661444
+  type: audio/mpeg
+  url: 'https://archive.org/download/designconv-2017-10-01-episode-004-ian-howard/2017-10-01-episode-004-ian-howard.mp3'
 ---
 
 A renowned leader in the field of furniture manufacture and design, Ian Howard
@@ -24,5 +38,6 @@ An earlier conversation with Ian can be heard in [Episode
 
 Listen now:
 <div class="responsive-embed" style="padding-top: 8%;">
+  <!--suppress HtmlUnknownAttribute, HtmlDeprecatedAttribute -->
   <iframe src="https://archive.org/embed/designconv-2017-10-01-episode-004-ian-howard" class="responsive-embed-item" height="50" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 </div>

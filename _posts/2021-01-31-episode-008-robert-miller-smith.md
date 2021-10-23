@@ -3,8 +3,24 @@ layout: post
 title: '8 &#124; Robert Miller Smith: Dean & design educator'
 date: '2021-01-31'
 guest: robert_miller_smith
-categories: [Episodes]
-tags: [design-education, graphic-design, illustration]
+categories:
+  - Episodes
+tags:
+  - design-education
+  - graphic-design
+  - illustration
+podcast:
+  itunes:
+    episodeType: full
+    episode: 8
+    season: 2021
+    title: 'Robert Miller Smith: Dean & design educator'
+    duration: 3884
+    explicit: 'false'
+    block: 'false'
+  length: 52442521
+  type: audio/mpeg
+  url: 'https://archive.org/download/designconv-2021-01-31-episode-008-robert-miller-smith/2021-01-31-episode-008-robert-miller-smith.mp3'
 ---
 
 Robert Miller Smith has been a major contributor to the design profession in
@@ -31,5 +47,6 @@ Robertson, and the Chartered Society of Designers (member # 24).
 
 Listen now:
 <div class="responsive-embed" style="padding-top: 8%;">
+  <!--suppress HtmlUnknownAttribute, HtmlDeprecatedAttribute -->
   <iframe src="https://archive.org/embed/designconv-2021-01-31-episode-008-robert-miller-smith" class="responsive-embed-item" height="50" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 </div>
