@@ -34,7 +34,7 @@
       <itunes:episode>{{ post.podcast.itunes.episode }}</itunes:episode>
       <itunes:season>{{ post.podcast.itunes.season }}</itunes:season>
       <itunes:title>{{ post.podcast.itunes.title | xml_escape }}</itunes:title>
-      <title>{{ post.title }}</title>
+      <title>{{ post.podcast.itunes.title | xml_escape }}</title>
       <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
       <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
       <link>{{ post.url | absolute_url }}</link>
