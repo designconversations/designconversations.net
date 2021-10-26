@@ -51,6 +51,11 @@ foreach ($episodeRecords as $i => $episodeRecord) {
     $frontMatter['title'] = formatEpisodeTitle($episodeRecord, $separator);
     $frontMatter['date'] = $episodeRecord[F_DATE] ?? null;
     $frontMatter['guest'] = $episodeRecord[F_GUEST_ID];
+    // $guestData = Yaml::parseFile('../_data/guests.yml');
+    // $picture = $guestData[$episodeRecord[F_GUEST_ID]]['picture'] ?? null;
+    // if ($picture) {
+    //     $frontMatter['image'] = $picture;
+    // }
     $frontMatter['categories'] = ['Episodes'];
     $frontMatter['tags'] = $episodeRecord[F_TAGS] ?? [];
     $episodeMp3Info = null;

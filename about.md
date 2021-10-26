@@ -21,9 +21,10 @@ brought recognition.
 
 Visit the [Episodes](/episodes/) page to view the full list of
 conversations, or the [Topics](/topics/) page to view episodes grouped
-by design topics. To be notified of new episodes, subscribe to the 
+by design topics. To be notified of new episodes, subscribe on your 
+favourite [podcast platform](#podcast-platforms) or subscribe to the 
 *Design Conversations* mailing list via the form at the foot of this 
-page, or subscribe on your favourite [podcast platform](#podcast-platforms).
+page.
 
 Thank you for your interest—I hope you enjoy and find value in the
 series.
@@ -54,7 +55,8 @@ and Interior Design.
 
 ## Podcast Platforms
 
-Subscribe on your favourite podcast platform, or add the [podcast RSS feed](/podcast.xml) to your podcast app. 
+Subscribe on your favourite podcast platform, or add the 
+[podcast RSS feed](/podcast.xml) to your podcast app. 
 
 <a href="https://podcasts.apple.com/au/podcast/design-conversations/id1591996555?itsct=podcast_box_badge&amp;itscg=30200&amp;ls=1" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="/images/listen-on-apple-podcasts-en-us.svg" alt="Listen on Apple Podcasts" style="border-radius: 13px; width: 250px; height: 83px;"></a>
 

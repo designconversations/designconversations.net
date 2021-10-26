@@ -13,5 +13,16 @@
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.url }}/images/apple-touch-icon-114x114-precomposed.png">
 <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.url }}/images/apple-touch-icon-144x144-precomposed.png">
+<!-- Social images -->
+{%- assign guest = page.guest | default: page.guests[0] | default: site.guest -%}
+{%- assign guest = site.data.guests[guest] | default: guest -%}
+{%- assign guest_picture = guest.picture | absolute_url -%}
+{% if guest_picture %}
+<meta property="og:image" content="{{ guest_picture }}" />
+<meta name="twitter:image" content="{{ guest_picture }}" />
+{% else %}
+<meta property="og:image" content="{{ site.logo | absolute_url }}/" />
+<meta name="twitter:image" content="{{ site.logo | absolute_url }}" />
+{% endif %}
 
 <!-- end custom head snippets -->
