@@ -31,15 +31,18 @@ exclude:
   - .idea/
   - src/
 footer_links:
+  - title: Apple
+    url: https://podcasts.apple.com/au/podcast/design-conversations/id1591996555
+    icon: fa fa-podcast
   - title: Feed
     url: atom.xml
-    icon: fas fa-rss-square
+    icon: fas fa-rss
   - title: Twitter
     url: https://twitter.com/designconv
-    icon: fab fa-twitter-square fa-2x
+    icon: fab fa-twitter fa-2x
   - title: Facebook
     url: https://facebook.com/designconversations
-    icon: fab fa-facebook-square fa-2x
+    icon: fab fa-facebook fa-2x
   - title: Instagram
     url: https://www.instagram.com/designconversations/
     icon: fab fa-instagram fa-2x
