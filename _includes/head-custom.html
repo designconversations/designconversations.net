@@ -18,10 +18,10 @@
 {%- assign guest = site.data.guests[guest] | default: guest -%}
 {%- assign guest_picture = guest.picture | absolute_url -%}
 {% if guest_picture %}
-<meta name="og:image" content="{{ guest_picture }}" />
+<meta property="og:image" content="{{ guest_picture }}" />
 <meta name="twitter:image" content="{{ guest_picture }}" />
 {% else %}
-<meta name="og:image" content="{{ site.logo | absolute_url }}/" />
+<meta property="og:image" content="{{ site.logo | absolute_url }}/" />
 <meta name="twitter:image" content="{{ site.logo | absolute_url }}" />
 {% endif %}
 
