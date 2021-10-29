@@ -56,9 +56,14 @@ and Interior Design.
 ## Podcast Platforms
 
 Subscribe on your favourite podcast platform, or add the 
-[podcast RSS feed](/podcast.xml) to your podcast app. 
+[podcast RSS feed](/podcast.xml) to your podcast app.
 
-<a href="https://podcasts.apple.com/au/podcast/design-conversations/id1591996555?itsct=podcast_box_badge&amp;itscg=30200&amp;ls=1" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="/images/listen-on-apple-podcasts-en-us.svg" alt="Listen on Apple Podcasts" style="border-radius: 13px; width: 250px; height: 83px;"></a>
+<a href="https://podcasts.apple.com/us/podcast/design-conversations/id1591996555" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;">
+  <img src="/images/listen-on-apple-podcasts-en-us.svg" alt="Listen on Apple Podcasts" style="border-radius: 13px; width: 250px; height: 83px;">
+</a>
+<a href="https://podcasts.google.com/feed/aHR0cHM6Ly9kZXNpZ25jb252ZXJzYXRpb25zLm5ldC9wb2RjYXN0LnhtbA" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;">
+  <img src="/images/EN_Google_Podcasts_Badge.svg" alt="Listen on Google Podcasts" style="border-radius: 13px; width: 250px; height: 83px;">
+</a>
 
 ## Credits
 
