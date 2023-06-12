@@ -22,6 +22,7 @@ podcast:
   length: 35430664
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2017-05-19-episode-001-max-robinson/2017-05-19-episode-001-max-robinson.mp3'
+  includeInFeed: true
 ---
 
 A contemporary artist and graphic designer, a poet and prose writer, Max

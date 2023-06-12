@@ -61,6 +61,8 @@ foreach ($episodeRecords as $i => $episodeRecord) {
         // Build the command to tag
         $command = new CommandBuilder('/opt/homebrew/bin/eyeD3');
         $command
+            ->addArgument('remove-all')
+            ->addArgument('to-v2.4')
             ->addArgument('title', formatEpisodeTitle($episodeRecord, '|', 'Design Conversations Episode'))
             ->addArgument('artist', $episodeArtist)
             ->addArgument('album', $episodeAlbum)

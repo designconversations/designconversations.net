@@ -20,6 +20,7 @@ podcast:
   length: 47017932
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2017-11-17-episode-005-ted-worsley/2017-11-17-episode-005-ted-worsley.mp3'
+  includeInFeed: true
 ---
 
 Ted Worsley was a student in Australia’s inaugural Industrial Design course

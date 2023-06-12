@@ -32,7 +32,7 @@ $site-logo-height: 90px !default;
 /* Entry title (smaller) */
 
 .entries-list .entry-title {
-  @include fluid-type($min-vw, $max-vw, 28px, 36px);
+  @include fluid-type($min-vw, $max-vw, 24px, 32px);
 }
 
 /* Site logo styles */
@@ -50,4 +50,9 @@ $site-logo-height: 90px !default;
     margin: 0;
     padding: 0;
   }
+}
+
+.guest-avatar {
+  border-radius: 45px;
+  margin: 10px;
 }

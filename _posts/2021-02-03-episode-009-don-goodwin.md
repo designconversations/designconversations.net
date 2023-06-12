@@ -22,6 +22,7 @@ podcast:
   length: 59227378
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2021-02-03-episode-009-don-goodwin/2021-02-03-episode-009-don-goodwin.mp3'
+  includeInFeed: true
 ---
 
 Don Goodwin played a significant design role as an Associate Director of the

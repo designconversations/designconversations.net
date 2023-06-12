@@ -82,6 +82,7 @@ foreach ($episodeRecords as $i => $episodeRecord) {
             getFormattedEpisodeName($episodeRecord, null, 'designconv'),
             getFormattedEpisodeName($episodeRecord, 'mp3')
         ),
+        'includeInFeed' => $episodeRecord[F_INCLUDE_IN_PODCAST_FEED] ?? false,
     ];
     $frontMatterStr = "---\n" . Yaml::dump($frontMatter, 3, 2) . "---\n";
 
@@ -106,6 +107,8 @@ foreach ($episodeRecords as $i => $episodeRecord) {
             $episodeRecord[F_MP3_EMBED_URL]
         ) . "\n";
         $content .= '</div>' . "\n";
+    } else {
+        $content .= "*Audio coming soon.*\n";
     }
     if (isset($episodeRecord[F_PHOTO_CREDIT]) && $episodeRecord[F_PHOTO_CREDIT]) {
         $content .= "\n*Photo credit: " . $episodeRecord[F_PHOTO_CREDIT] . "*\n";

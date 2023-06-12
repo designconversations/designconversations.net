@@ -19,6 +19,7 @@ podcast:
   length: 36661444
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2017-10-01-episode-004-ian-howard/2017-10-01-episode-004-ian-howard.mp3'
+  includeInFeed: true
 ---
 
 A renowned leader in the field of furniture manufacture and design, Ian Howard
