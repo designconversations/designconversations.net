@@ -12,6 +12,7 @@ const F_TAGS = 'tags';
 const F_SHOW_NOTES = 'showNotes';
 const F_MP3_EMBED_URL = 'mp3EmbedUrl';
 const F_PHOTO_CREDIT = 'photoCredit';
+const F_INCLUDE_IN_PODCAST_FEED = 'includeInPodcastFeed';
 
 const STATE_DRAFT = 'Draft';
 const STATE_PUBLISHED = 'Published';
@@ -68,6 +69,7 @@ function getEpisodeRecords(Logger $logger)
         F_SHOW_NOTES . '3',
         F_MP3_EMBED_URL,
         F_PHOTO_CREDIT,
+        F_INCLUDE_IN_PODCAST_FEED,
     ];
 
     // Config

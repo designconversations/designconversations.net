@@ -4,7 +4,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--suppress XmlUnusedNamespaceDeclaration -->
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
-     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:podcast="https://podcastindex.org/namespace/1.0">
   <channel>
     <title>{{ site.title }}</title>
     <link>{{ "" | absolute_url }}</link>
@@ -29,7 +30,7 @@
     <!-- Undocumented -->
     <itunes:subtitle>{{ site.description | xml_escape }}</itunes:subtitle>
     <itunes:summary>{{ site.podcast.description | strip_html | normalize_whitespace }}</itunes:summary>
-    {% for post in site.posts %}<item>
+    {% assign postsToInclude = site.posts | where: 'podcast.includeInFeed', true %}{% for post in postsToInclude %}<item>
       <itunes:episodeType>{{ post.podcast.itunes.episodeType }}</itunes:episodeType>
       <itunes:episode>{{ post.podcast.itunes.episode }}</itunes:episode>
       <itunes:season>{{ post.podcast.itunes.season }}</itunes:season>
@@ -55,6 +56,9 @@
       <!-- Undocumented -->
       <itunes:summary>{{ post.excerpt | strip_html | normalize_whitespace }}</itunes:summary>
       <itunes:keywords>{{ post.tags | join: "," }}</itunes:keywords>
-    </item>{% endfor %}
+      <podcast:person role="host" img="{{ '/images/author_geoff_fitzpatrick.jpg' | absolute_url }}">Geoff Fitzpatrick</podcast:person>
+      {% assign guest = site.data.guests[post.guest] %}<podcast:person role="guest" img="{{ guest.picture | absolute_url }}">{{ guest.name }}</podcast:person>
+    </item>
+    {% endfor %}
   </channel>
 </rss>
