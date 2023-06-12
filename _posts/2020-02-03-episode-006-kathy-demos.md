@@ -21,6 +21,7 @@ podcast:
   length: 38826411
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2020-02-03-episode-006-kathy-demos/2020-02-03-episode-006-kathy-demos.mp3'
+  includeInFeed: true
 ---
 
 One of the most influential figures in Australian design, Kathy Demos has been

@@ -22,6 +22,7 @@ podcast:
   length: 30546120
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2017-08-23-episode-003-david-lancashire/2017-08-23-episode-003-david-lancashire.mp3'
+  includeInFeed: true
 ---
 
 A major artist and graphic designer, David Lancashire is still working in his

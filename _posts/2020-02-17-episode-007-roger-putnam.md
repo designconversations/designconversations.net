@@ -22,6 +22,7 @@ podcast:
   length: 25834937
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2020-02-17-episode-007-roger-putnam/2020-02-17-episode-007-roger-putnam.mp3'
+  includeInFeed: true
 ---
 
 An influential figure in the field of furniture design and manufacture, Roger

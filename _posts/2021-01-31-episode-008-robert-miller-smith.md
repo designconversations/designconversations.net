@@ -21,6 +21,7 @@ podcast:
   length: 52442521
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2021-01-31-episode-008-robert-miller-smith/2021-01-31-episode-008-robert-miller-smith.mp3'
+  includeInFeed: true
 ---
 
 Robert Miller Smith has been a major contributor to the design profession in
