@@ -6,7 +6,7 @@ excerpt: >
   design practices in Australia from the 20th century to the present 
   day.
 permalink: /
-posts_limit: 10
+posts_limit: 15
 search_omit: true
 ---
 
