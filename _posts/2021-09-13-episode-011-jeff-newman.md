@@ -20,7 +20,7 @@ podcast:
   length: 35868423
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2021-09-13-episode-011-jeff-newman/2021-09-13-episode-011-jeff-newman.mp3'
-  includeInFeed: false
+  includeInFeed: true
 ---
 
 Jeffrey Newman is an industrial designer, who trained in the fourth intake of

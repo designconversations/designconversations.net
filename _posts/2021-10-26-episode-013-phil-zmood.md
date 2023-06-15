@@ -20,7 +20,7 @@ podcast:
   length: 15531238
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2021-10-26-episode-013-phil-zmood/2021-10-26-episode-013-phil-zmood.mp3'
-  includeInFeed: false
+  includeInFeed: true
 ---
 
 Phillip Zmood studied Industrial Design at RMIT, and began his career with

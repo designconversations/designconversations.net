@@ -20,7 +20,7 @@ podcast:
   length: 28478113
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2022-01-14-episode-014-dario-zoureff/2022-01-14-episode-014-dario-zoureff.mp3'
-  includeInFeed: false
+  includeInFeed: true
 ---
 
 Dario Zoureff is a pre-eminent interior and furniture designer, with a memorable

@@ -15,13 +15,13 @@ podcast:
     episode: 10
     season: 2021
     title: 'David Terry: Industrial Design Council of Australia & industrial designer'
-    duration: 0
+    duration: 3289
     explicit: 'false'
     block: 'false'
-  length: 0
+  length: 37472737
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2021-08-24-episode-010-david-terry/2021-08-24-episode-010-david-terry.mp3'
-  includeInFeed: false
+  includeInFeed: true
 ---
 
 David Terry trained in Industrial Design at RMIT, and then under architect Don
@@ -39,4 +39,8 @@ Wilson, Jackson Wayne Advertising, Ian McPhee, Good Design Awards, Claude
 Forrell, Premier’s Design Awards, Trevor Ling, Jony Ive, Arthur Robinson,
 Dieter Rams and Braun.
 
-*Audio coming soon.*
+Listen now:
+<div class="responsive-embed" style="padding-top: 8%;">
+  <!--suppress HtmlUnknownAttribute, HtmlDeprecatedAttribute -->
+  <iframe src="https://archive.org/embed/designconv-2021-08-24-episode-010-david-terry" class="responsive-embed-item" height="50" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+</div>
