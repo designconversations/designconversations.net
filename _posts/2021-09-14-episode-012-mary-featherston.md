@@ -21,7 +21,7 @@ podcast:
   length: 29268337
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2021-09-14-episode-012-mary-featherston/2021-09-14-episode-012-mary-featherston.mp3'
-  includeInFeed: false
+  includeInFeed: true
 ---
 
 Mary Featherston, together with her husband Grant, have been seminal figures in
