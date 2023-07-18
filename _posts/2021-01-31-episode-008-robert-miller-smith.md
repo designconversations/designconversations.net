@@ -15,10 +15,10 @@ podcast:
     episode: 8
     season: 2021
     title: 'Robert Miller Smith: Dean & design educator'
-    duration: 3884
+    duration: 3887
     explicit: 'false'
     block: 'false'
-  length: 52442521
+  length: 77695793
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2021-01-31-episode-008-robert-miller-smith/2021-01-31-episode-008-robert-miller-smith.mp3'
   includeInFeed: true

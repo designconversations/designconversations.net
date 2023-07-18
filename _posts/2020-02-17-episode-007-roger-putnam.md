@@ -16,10 +16,10 @@ podcast:
     episode: 7
     season: 2020
     title: 'Roger Putnam: Furniture designer'
-    duration: 1864
+    duration: 1866
     explicit: 'false'
     block: 'false'
-  length: 25834937
+  length: 37302509
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2020-02-17-episode-007-roger-putnam/2020-02-17-episode-007-roger-putnam.mp3'
   includeInFeed: true

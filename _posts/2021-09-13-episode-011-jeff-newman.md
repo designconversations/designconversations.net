@@ -14,10 +14,10 @@ podcast:
     episode: 11
     season: 2021
     title: 'Jeffrey Newman: Industrial Design Council of Australia'
-    duration: 3395
+    duration: 3398
     explicit: 'false'
     block: 'false'
-  length: 35868423
+  length: 67920857
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2021-09-13-episode-011-jeff-newman/2021-09-13-episode-011-jeff-newman.mp3'
   includeInFeed: true

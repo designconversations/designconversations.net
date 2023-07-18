@@ -14,10 +14,10 @@ podcast:
     episode: 5
     season: 2017
     title: 'Ted Worsley: Industrial designer & educator'
-    duration: 3407
+    duration: 3410
     explicit: 'false'
     block: 'false'
-  length: 47017932
+  length: 68165834
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2017-11-17-episode-005-ted-worsley/2017-11-17-episode-005-ted-worsley.mp3'
   includeInFeed: true

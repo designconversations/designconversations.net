@@ -15,10 +15,10 @@ podcast:
     episode: 12
     season: 2021
     title: 'Mary Featherston AM: Interior & furniture designer, early childhood environmental designer'
-    duration: 2783
+    duration: 2785
     explicit: 'false'
     block: 'false'
-  length: 29268337
+  length: 55679599
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2021-09-14-episode-012-mary-featherston/2021-09-14-episode-012-mary-featherston.mp3'
   includeInFeed: true

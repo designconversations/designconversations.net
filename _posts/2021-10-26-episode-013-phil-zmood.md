@@ -14,10 +14,10 @@ podcast:
     episode: 13
     season: 2021
     title: 'Phillip Zmood: Automotive designer'
-    duration: 5804
+    duration: 2905
     explicit: 'false'
     block: 'false'
-  length: 15531238
+  length: 58062306
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2021-10-26-episode-013-phil-zmood/2021-10-26-episode-013-phil-zmood.mp3'
   includeInFeed: true

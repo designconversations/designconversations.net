@@ -16,10 +16,10 @@ podcast:
     episode: 9
     season: 2021
     title: 'Don Goodwin: Conran design director'
-    duration: 5195
+    duration: 5199
     explicit: 'false'
     block: 'false'
-  length: 59227378
+  length: 103910658
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2021-02-03-episode-009-don-goodwin/2021-02-03-episode-009-don-goodwin.mp3'
   includeInFeed: true

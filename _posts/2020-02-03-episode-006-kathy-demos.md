@@ -15,10 +15,10 @@ podcast:
     episode: 6
     season: 2020
     title: 'Kathy Demos: Design director'
-    duration: 2801
+    duration: 2803
     explicit: 'false'
     block: 'false'
-  length: 38826411
+  length: 56035482
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2020-02-03-episode-006-kathy-demos/2020-02-03-episode-006-kathy-demos.mp3'
   includeInFeed: true
