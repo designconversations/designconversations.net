@@ -16,10 +16,10 @@ podcast:
     episode: 1
     season: 2017
     title: 'Max Robinson: London & beyond'
-    duration: 2791
+    duration: 2794
     explicit: 'false'
     block: 'false'
-  length: 35430664
+  length: 55842535
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2017-05-19-episode-001-max-robinson/2017-05-19-episode-001-max-robinson.mp3'
   includeInFeed: true

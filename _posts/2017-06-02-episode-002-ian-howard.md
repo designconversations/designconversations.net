@@ -13,10 +13,10 @@ podcast:
     episode: 2
     season: 2017
     title: 'Ian Howard: Aristoc & beyond'
-    duration: 5167
+    duration: 5172
     explicit: 'false'
     block: 'false'
-  length: 66507466
+  length: 103368987
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2017-06-02-episode-002-ian-howard/2017-06-02-episode-002-ian-howard.mp3'
   includeInFeed: true

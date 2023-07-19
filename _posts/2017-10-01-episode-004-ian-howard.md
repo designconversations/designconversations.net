@@ -13,10 +13,10 @@ podcast:
     episode: 4
     season: 2017
     title: 'Ian Howard: International connections'
-    duration: 2814
+    duration: 2817
     explicit: 'false'
     block: 'false'
-  length: 36661444
+  length: 56302870
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2017-10-01-episode-004-ian-howard/2017-10-01-episode-004-ian-howard.mp3'
   includeInFeed: true
