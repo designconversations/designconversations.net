@@ -16,7 +16,7 @@ podcast:
     episode: 3
     season: 2017
     title: 'David Lancashire: Artist, designer & illustrator'
-    duration: 2221
+    duration: 2216
     explicit: 'false'
     block: 'false'
   length: 44395107

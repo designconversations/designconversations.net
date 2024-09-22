@@ -14,7 +14,7 @@ podcast:
     episode: 5
     season: 2017
     title: 'Ted Worsley: Industrial designer & educator'
-    duration: 3410
+    duration: 3404
     explicit: 'false'
     block: 'false'
   length: 68165834

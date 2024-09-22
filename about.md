@@ -19,8 +19,8 @@ series strives to cover most of the design disciplines currently
 practiced, and examine the motivation, inspiration and hard work that
 brought recognition.
 
-Visit the [Episodes](/episodes/) page to view the full list of
-conversations, or the [Topics](/topics/) page to view episodes grouped
+Visit the [Episodes](/episodes) page to view the full list of
+conversations, or the [Topics](/topics) page to view episodes grouped
 by design topics. To be notified of new episodes, subscribe on your 
 favourite [podcast platform](#podcast-platforms) or subscribe to the 
 *Design Conversations* mailing list via the form at the foot of this 
@@ -34,7 +34,7 @@ June 2019
 
 ## Interviewer Profile
 
-<img class="author-avatar" align="right" src="/images/author_geoff_fitzpatrick.jpg">
+<img class="author-avatar" style="float: right" src="/images/author_geoff_fitzpatrick.jpg" alt="Geoff Fitzpatrick photo">
 
 Geoff Fitzpatrick trained in the Interior Designer Diploma at Royal
 Melbourne Technical College in the early sixties. He was engaged in
@@ -61,9 +61,10 @@ Subscribe on your favourite podcast platform, or add the
 <a href="https://podcasts.apple.com/us/podcast/design-conversations/id1591996555" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;">
   <img src="/images/listen-on-apple-podcasts-en-us.svg" alt="Listen on Apple Podcasts" style="border-radius: 13px; width: 250px; height: 83px;">
 </a>
-<a href="https://podcasts.google.com/feed/aHR0cHM6Ly9kZXNpZ25jb252ZXJzYXRpb25zLm5ldC9wb2RjYXN0LnhtbA" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;">
-  <img src="/images/EN_Google_Podcasts_Badge.svg" alt="Listen on Google Podcasts" style="border-radius: 13px; width: 250px; height: 83px;">
-</a>
+
+[//]: # (<a href="https://podcasts.google.com/feed/aHR0cHM6Ly9kZXNpZ25jb252ZXJzYXRpb25zLm5ldC9wb2RjYXN0LnhtbA" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;">)
+[//]: # (  <img src="/images/EN_Google_Podcasts_Badge.svg" alt="Listen on Google Podcasts" style="border-radius: 13px; width: 250px; height: 83px;">)
+[//]: # (</a>)
 
 ## Credits
 
@@ -87,7 +88,7 @@ Subscribe on your favourite podcast platform, or add the
     </tr>
     <tr>
       <td>Audio production</td>
-      <td>Liam Fitzpatrick</td>
+      <td>Liam Fitzpatrick & Panpot Audio</td>
     </tr>
     <tr>
       <td>Technical production</td>

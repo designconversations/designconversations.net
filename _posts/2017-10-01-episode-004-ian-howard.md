@@ -13,7 +13,7 @@ podcast:
     episode: 4
     season: 2017
     title: 'Ian Howard: International connections'
-    duration: 2817
+    duration: 2811
     explicit: 'false'
     block: 'false'
   length: 56302870

@@ -52,6 +52,13 @@ $site-logo-height: 90px !default;
   }
 }
 
+/* Avatar styles */
+
+.author-avatar {
+  border-radius: 45px;
+  margin: 10px;
+}
+
 .guest-avatar {
   border-radius: 45px;
   margin: 10px;

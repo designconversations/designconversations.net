@@ -16,7 +16,7 @@ podcast:
     episode: 1
     season: 2017
     title: 'Max Robinson: London & beyond'
-    duration: 2794
+    duration: 2788
     explicit: 'false'
     block: 'false'
   length: 55842535
