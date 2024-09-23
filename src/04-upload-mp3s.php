@@ -3,7 +3,9 @@
 
 declare(strict_types=1);
 
-use AdamBrett\ShellWrapper\Command\Builder as CommandBuilder;
+use AdamBrett\ShellWrapper\Command\Argument;
+use AdamBrett\ShellWrapper\Command;
+use AdamBrett\ShellWrapper\Command\SubCommand;
 use AdamBrett\ShellWrapper\Runners\Exec;
 use League\CLImate\CLImate;
 
@@ -20,7 +22,7 @@ $metadataOnly = isset($argv[1]) && $argv[1] == '--metadataOnly';
 // Process episode MP3s
 foreach ($episodeRecords as $i => $episodeRecord) {
     $episodeId = $episodeRecord[F_EPISODE_ID];
-    if (!in_array($episodeRecord[F_STATE], [STATE_DRAFT, STATE_PUBLISHED])) {
+    if ($episodeRecord[F_STATE] != STATE_PUBLISHED) {
         $logger->info(sprintf('Skipping episode %d, state is %s', $episodeId, $episodeRecord[F_STATE]));
         continue;
     }
@@ -78,25 +80,22 @@ foreach ($episodeRecords as $i => $episodeRecord) {
         }
 
         // Build the command to upload
-        $command = new CommandBuilder('/opt/homebrew/bin/ia');
+        $command = new Command('/opt/homebrew/bin/ia');
         if ($metadataOnly) {
-            $command
-                ->addSubCommand('metadata')
-                ->addSubCommand($internetArchiveItemId)
-                ->addArgument('modify', $metadataValues);
+            $command->addSubCommand(new SubCommand('metadata'));
+            $command->addSubCommand(new SubCommand($internetArchiveItemId));
+            $command->addSubCommand(new SubCommand('metadata'));
         } else {
             // Only set mediatype on initial upload as this can't be changed:
             // > Note that some metadata fields (e.g. mediatype) cannot be
             // > modified, and must instead be set initially on upload.
             // See: https://archive.org/services/docs/api/internetarchive/cli.html#modifying-metadata
             $metadataValues[] = 'mediatype:audio';
-            $command
-                ->addSubCommand('upload')
-                ->addSubCommand($internetArchiveItemId)
-                ->addSubCommand($mp3TagFilePath)
-                ->addArgument('metadata', $metadataValues)
-            ;
+            $command->addSubCommand(new SubCommand('upload'));
+            $command->addSubCommand(new SubCommand($internetArchiveItemId));
+            $command->addSubCommand(new SubCommand($mp3TagFilePath));
         }
+        $command->addArgument(new Argument('metadata', $metadataValues));
         $logger->debug($command);
 
         // Run the command

@@ -16,7 +16,7 @@ podcast:
     episode: 7
     season: 2020
     title: 'Roger Putnam: Furniture designer'
-    duration: 1866
+    duration: 1862
     explicit: 'false'
     block: 'false'
   length: 37302509

@@ -15,7 +15,7 @@ podcast:
     episode: 6
     season: 2020
     title: 'Kathy Demos: Design director'
-    duration: 2803
+    duration: 2798
     explicit: 'false'
     block: 'false'
   length: 56035482

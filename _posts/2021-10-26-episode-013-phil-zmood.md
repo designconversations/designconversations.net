@@ -14,7 +14,7 @@ podcast:
     episode: 13
     season: 2021
     title: 'Phillip Zmood: Automotive designer'
-    duration: 2905
+    duration: 2899
     explicit: 'false'
     block: 'false'
   length: 58062306

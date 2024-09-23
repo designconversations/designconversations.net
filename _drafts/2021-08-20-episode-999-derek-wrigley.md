@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '15 &#124; Derek Wrigley OAM: Founding designer & architect, Renaissance man'
+title: '999 &#124; Derek Wrigley OAM: Founding designer & architect, Renaissance man'
 date: '2021-08-20'
 guest: derek_wrigley
 categories:
@@ -14,7 +14,7 @@ tags:
 podcast:
   itunes:
     episodeType: full
-    episode: 15
+    episode: 999
     season: 2023
     title: 'Derek Wrigley OAM: Founding designer & architect, Renaissance man'
     duration: 0
@@ -22,7 +22,7 @@ podcast:
     block: 'false'
   length: 0
   type: audio/mpeg
-  url: 'https://archive.org/download/designconv-2021-08-20-episode-015-derek-wrigley/2021-08-20-episode-015-derek-wrigley.mp3'
+  url: 'https://archive.org/download/designconv-2021-08-20-episode-999-derek-wrigley/2021-08-20-episode-999-derek-wrigley.mp3'
   includeInFeed: false
 ---
 

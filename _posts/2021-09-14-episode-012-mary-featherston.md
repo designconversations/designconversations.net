@@ -15,7 +15,7 @@ podcast:
     episode: 12
     season: 2021
     title: 'Mary Featherston AM: Interior & furniture designer, early childhood environmental designer'
-    duration: 2785
+    duration: 2780
     explicit: 'false'
     block: 'false'
   length: 55679599

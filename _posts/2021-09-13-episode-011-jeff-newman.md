@@ -14,7 +14,7 @@ podcast:
     episode: 11
     season: 2021
     title: 'Jeffrey Newman: Industrial Design Council of Australia'
-    duration: 3398
+    duration: 3391
     explicit: 'false'
     block: 'false'
   length: 67920857

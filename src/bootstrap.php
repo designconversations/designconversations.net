@@ -43,8 +43,8 @@ require __DIR__ . '/vendor/autoload.php';
  */
 function getLogger(string $logLevel, CLImate $climate, string $appTitle): Logger
 {
-    $logger = new Logger($logLevel ?? LogLevel::INFO, $climate);
-    $logger->log(LogLevel::INFO, $appTitle ?? 'Undefined app title');
+    $logger = new Logger($logLevel, $climate);
+    $logger->log(LogLevel::INFO, $appTitle);
 
     return $logger;
 }
@@ -124,7 +124,7 @@ function outputEpisodeData(array $episodeRecords, CLImate $climate): void
         );
         $episodeRecordsForTable[$i] = $tmpEpisodeRecord;
     }
-    $climate->table($episodeRecordsForTable);
+    @$climate->table($episodeRecordsForTable);
 }
 
 /**
@@ -170,9 +170,9 @@ function getFormattedEpisodeName(array $episodeRecord, string $fileExtension = n
  */
 function formatEpisodeTitle(mixed $episodeRecord, string $separator, ?string $prefix = null): string
 {
-    $formattedEpisodeTitle = "{$episodeRecord[F_EPISODE_ID]} {$separator} {$episodeRecord[F_TITLE]}";
+    $formattedEpisodeTitle = "{$episodeRecord[F_EPISODE_ID]} $separator {$episodeRecord[F_TITLE]}";
     if ($prefix) {
-        $formattedEpisodeTitle = "{$prefix} {$formattedEpisodeTitle}";
+        $formattedEpisodeTitle = "$prefix $formattedEpisodeTitle";
     }
 
     return $formattedEpisodeTitle;

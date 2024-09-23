@@ -13,7 +13,7 @@ podcast:
     episode: 2
     season: 2017
     title: 'Ian Howard: Aristoc & beyond'
-    duration: 5172
+    duration: 5162
     explicit: 'false'
     block: 'false'
   length: 103368987

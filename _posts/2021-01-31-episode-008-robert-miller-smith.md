@@ -15,7 +15,7 @@ podcast:
     episode: 8
     season: 2021
     title: 'Robert Miller Smith: Dean & design educator'
-    duration: 3887
+    duration: 3880
     explicit: 'false'
     block: 'false'
   length: 77695793

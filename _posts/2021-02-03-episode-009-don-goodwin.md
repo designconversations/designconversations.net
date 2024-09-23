@@ -16,7 +16,7 @@ podcast:
     episode: 9
     season: 2021
     title: 'Don Goodwin: Conran design director'
-    duration: 5199
+    duration: 5189
     explicit: 'false'
     block: 'false'
   length: 103910658
