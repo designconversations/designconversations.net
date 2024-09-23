@@ -13,10 +13,10 @@ podcast:
     episode: 15
     season: 2024
     title: 'Colin Wood: Design publisher'
-    duration: 2618
+    duration: 2608
     explicit: 'false'
     block: 'false'
-  length: 51045706
+  length: 41743066
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2024-06-11-episode-015-colin-wood/2024-06-11-episode-015-colin-wood.mp3'
   includeInFeed: true
@@ -36,7 +36,7 @@ Demos, Phil Zmood, Richard Carlson,  Design World, Thomas Nelson, Macmillan
 Australia, Peter Sidwell, All Graphics, ID Magazine, Chee Pearlman, Ian Edgar,
 Australia Council, Michael Bryce, John Andrews, Philip Cox, Jan Fawkner, Sally
 Brown, John Button, Design Council, David Terry, Good Design Ticket, Nagoya
-Design Conference, Domus, Abitare, Eric Speakerman David Hillman, and Ken
+Design Conference, Domus, Abitare, Eric Speakerman, David Hillman, and Ken
 Grange.
 
 Listen now:
