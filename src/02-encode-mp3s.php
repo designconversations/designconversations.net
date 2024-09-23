@@ -4,7 +4,7 @@
 declare(strict_types=1);
 
 use Lame\Lame;
-use Lame\Settings\Encoding\Preset;
+use Lame\Settings\Encoding\CBR;
 use Lame\Settings\Settings;
 use League\CLImate\CLImate;
 use wapmorgan\Mp3Info\Mp3Info;
@@ -20,9 +20,11 @@ $episodeRecords = getEpisodeRecords($logger);
 outputEpisodeData($episodeRecords, new CLImate());
 
 // Set up encoder with 'radio' preset
-$lameEncodingPresetType = 'radio';
-$lameEncoding = new Preset();
-$lameEncoding->setType($lameEncodingPresetType);
+// $lameEncodingPresetType = 'radio';
+// $lameEncoding->setType($lameEncodingPresetType);
+$lameEncodingBitRate = 128;
+$lameEncoding = new CBR();
+$lameEncoding->setBitrate($lameEncodingBitRate);
 $lameSettings = new Settings($lameEncoding);
 $lame = new Lame('/opt/homebrew/bin/lame', $lameSettings);
 
@@ -60,7 +62,7 @@ foreach ($episodeRecords as $i => $episodeRecord) {
 
     // Re-encode the MP3
     try {
-        $logger->info(vsprintf('Encoding %s with %s preset', [$mp3FileName, $lameEncodingPresetType]));
+        $logger->info(vsprintf('Encoding %s with %s bitrate', [$mp3FileName, $lameEncodingBitRate]));
         $lame->encode($mp3OrigFilePath, $mp3EncFilePath);
         $logger->info(vsprintf('File encoded to %s', [$mp3EncFilePath]));
     } catch (Exception $e) {
