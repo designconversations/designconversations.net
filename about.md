@@ -55,43 +55,57 @@ and Interior Design.
 
 ## Podcast Platforms
 
-Subscribe on your favourite podcast platform, or add the 
+Subscribe on your favourite podcast platform, or add the
 [podcast RSS feed](/podcast.xml) to your podcast app.
 
-<a href="https://podcasts.apple.com/us/podcast/design-conversations/id1591996555" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;">
-  <img src="/images/listen-on-apple-podcasts-en-us.svg" alt="Listen on Apple Podcasts" style="border-radius: 13px; width: 250px; height: 83px;">
-</a>
+<div style="margin-bottom: 40px; display: block">
 
-[//]: # (<a href="https://podcasts.google.com/feed/aHR0cHM6Ly9kZXNpZ25jb252ZXJzYXRpb25zLm5ldC9wb2RjYXN0LnhtbA" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;">)
-[//]: # (  <img src="/images/EN_Google_Podcasts_Badge.svg" alt="Listen on Google Podcasts" style="border-radius: 13px; width: 250px; height: 83px;">)
-[//]: # (</a>)
+  <a href="https://podcasts.apple.com/us/podcast/design-conversations/id1591996555"
+    title="Listen on Apple Podcasts" target="blank" style="float: left; margin: 0 5px 0 5px">
+    <img loading="lazy" src="/images/listen-on-apple-podcasts-en-us.svg" alt="Listen on Apple Podcasts"
+      style="height: 80px" />
+  </a>
+
+  <a href="https://open.spotify.com/show/6LwyXwj6Z5bGUj0KZ00CpS"
+    title="Listen on Spotify" target="blank" style="float: left; margin: 0 5px 0 5px">
+    <img loading="lazy" src="/images/spotify-podcast-badge-blk-grn-330x80.svg" alt="Listen on Spotify"
+      style="height: 80x" />
+  </a>
+
+  <a href="https://www.listennotes.com/podcasts/design-conversations-geoff-fitzpatrick-zgABdLfUr1l/"
+    title="Design Conversations | Listen Notes" target="blank" style="margin: 0 5px 0 5px">
+    <img loading="lazy" src="/images/listen-notes-podcast-badge.png"
+      alt="Design Conversations | Listen Notes" style="height: 80px" />
+  </a>
+
+</div>
 
 ## Credits
 
 <table>
   <tbody>
     <tr>
-      <td>Logo</td>
+      <th>Logo</th>
       <td>etc. graphic design</td>
     </tr>
     <tr>
-      <td>Music</td>
+      <th>Music</th>
       <td><i>C’est La Vie</i> by Tristan Barton &#169; PremiumBeat</td>
     </tr>
     <tr>
-      <td>Audio archiving</td>
+      <th>Audio archiving</th>
       <td>Internet Archive</td>
     </tr>
     <tr>
-      <td>Website</td>
+      <th>Website</th>
       <td>Jekyll & So Simple</td>
     </tr>
     <tr>
-      <td>Audio production</td>
+      <th>Audio production</th>
       <td>Liam Fitzpatrick & Panpot Audio</td>
     </tr>
     <tr>
-      <td>Technical production</td>
+      <th>Technical production</th>
       <td>John Fitzpatrick</td>
     </tr>
   </tbody>
