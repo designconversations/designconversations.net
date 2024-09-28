@@ -34,10 +34,10 @@ Carter, Tangara Trains, V&A Museum, Mary Quant, Festival of Britain, Norrie
 Paramor, Abbey Road, the Rolling Stones, Gerard Herbst, Robert Pataki, Kathy
 Demos, Phil Zmood, Richard Carlson,  Design World, Thomas Nelson, Macmillan
 Australia, Peter Sidwell, All Graphics, ID Magazine, Chee Pearlman, Ian Edgar,
-Australia Council, Michael Bryce, John Andrews, Philip Cox, Jan Fawkner, Sally
-Brown, John Button, Design Council, David Terry, Good Design Ticket, Nagoya
-Design Conference, Domus, Abitare, Eric Speakerman, David Hillman, and Ken
-Grange.
+Australia Council, Michael Bryce, John Andrews, Philip Cox, Janne Faulkner,
+Sally Brown, John Button, Design Council, David Terry, Good Design Ticket,
+Nagoya Design Conference, Domus, Abitare, Eric Speakerman, David Hillman, and
+Ken Grange.
 
 Listen now:
 <div class="responsive-embed" style="padding-top: 8%;">
