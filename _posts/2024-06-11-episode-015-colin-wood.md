@@ -16,7 +16,7 @@ podcast:
     duration: 2608
     explicit: 'false'
     block: 'false'
-  length: 41743066
+  length: 41743070
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2024-06-11-episode-015-colin-wood/2024-06-11-episode-015-colin-wood.mp3'
   includeInFeed: true
