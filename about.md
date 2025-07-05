@@ -49,7 +49,7 @@ for forty-five years, and served on the senior executive for several
 years, becoming the founding editor of Artichoke magazine and co-founder
 of the Colourways program.
 
-In 2005, he was inducted into the DIA Hall of Fame and later made a
+In 2005, Geoff was inducted into the DIA Hall of Fame and later made a
 Design Ambassador. In 2017, he received an OAM for services to Industrial
 and Interior Design.
 
@@ -98,11 +98,11 @@ Subscribe on your favourite podcast platform, or add the
     </tr>
     <tr>
       <th>Website</th>
-      <td>Jekyll & So Simple</td>
+      <td>Jekyll with So Simple Theme</td>
     </tr>
     <tr>
       <th>Audio production</th>
-      <td>Liam Fitzpatrick & Panpot Audio</td>
+      <td>Liam Fitzpatrick, Panpot Audio and John Fitzpatrick</td>
     </tr>
     <tr>
       <th>Technical production</th>
