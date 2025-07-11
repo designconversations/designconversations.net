@@ -68,11 +68,11 @@ author:
   email: mail@designconversations.net
   twitter: designconv
 # Custom
-matomo:
-  domain: sa.j13k.com
-  siteId: 16
-  goalIds:
-    newsletter: 1
+#matomo:
+#  domain: sa.j13k.com
+#  siteId: 16
+#  goalIds:
+#    newsletter: 1
 # Production build settings
 theme: jekyll-theme-so-simple
 remote_theme: ~
