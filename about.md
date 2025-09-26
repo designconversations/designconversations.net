@@ -34,7 +34,7 @@ June 2019
 
 ## Interviewer Profile
 
-<img class="author-avatar" style="float: right" src="/images/author_geoff_fitzpatrick.jpg" alt="Geoff Fitzpatrick photo">
+<img class="author-avatar" style="float: right" src="/assets/images/site/author_geoff_fitzpatrick.jpg" alt="Geoff Fitzpatrick photo">
 
 Geoff Fitzpatrick trained in the Interior Designer Diploma at Royal
 Melbourne Technical College in the early sixties. He was engaged in
@@ -62,19 +62,19 @@ Subscribe on your favourite podcast platform, or add the
 
   <a href="https://podcasts.apple.com/us/podcast/design-conversations/id1591996555"
     title="Listen on Apple Podcasts" target="blank" style="float: left; margin: 0 5px 0 5px">
-    <img loading="lazy" src="/images/listen-on-apple-podcasts-en-us.svg" alt="Listen on Apple Podcasts"
+    <img loading="lazy" src="/assets/images/badges/listen-on-apple-podcasts-en-us.svg" alt="Listen on Apple Podcasts"
       style="height: 80px" />
   </a>
 
   <a href="https://open.spotify.com/show/6LwyXwj6Z5bGUj0KZ00CpS"
     title="Listen on Spotify" target="blank" style="float: left; margin: 0 5px 0 5px">
-    <img loading="lazy" src="/images/spotify-podcast-badge-blk-grn-330x80.svg" alt="Listen on Spotify"
+    <img loading="lazy" src="/assets/images/badges/spotify-podcast-badge-blk-grn-330x80.svg" alt="Listen on Spotify"
       style="height: 80x" />
   </a>
 
   <a href="https://www.listennotes.com/podcasts/design-conversations-geoff-fitzpatrick-zgABdLfUr1l/"
     title="Design Conversations | Listen Notes" target="blank" style="margin: 0 5px 0 5px">
-    <img loading="lazy" src="/images/listen-notes-podcast-badge.png"
+    <img loading="lazy" src="/assets/images/badges/listen-notes-podcast-badge.png"
       alt="Design Conversations | Listen Notes" style="height: 80px" />
   </a>
 

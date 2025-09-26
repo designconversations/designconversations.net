@@ -1,51 +1,51 @@
 max_robinson:
   name: Max Robinson
-  picture: /images/guest_max_robinson.jpg
+  picture: /assets/images/guests/guest_max_robinson.jpg
 ian_howard:
   name: Ian Howard
-  picture: /images/guest_ian_howard.jpg
+  picture: /assets/images/guests/guest_ian_howard.jpg
 david_lancashire:
   name: David Lancashire
-  picture: /images/guest_david_lancashire.jpg
+  picture: /assets/images/guests/guest_david_lancashire.jpg
 ted_worsley:
   name: Ted Worsley
-  picture: /images/guest_ted_worsley.jpg
+  picture: /assets/images/guests/guest_ted_worsley.jpg
 kathy_demos:
   name: Kathy Demos
-  picture: /images/guest_kathy_demos.jpg
+  picture: /assets/images/guests/guest_kathy_demos.jpg
 roger_putnam:
   name: Roger Putnam
-  picture: /images/guest_roger_putnam.jpg
+  picture: /assets/images/guests/guest_roger_putnam.jpg
 robert_miller_smith:
   name: Robert Miller Smith
-  picture: /images/guest_robert_miller_smith.jpg
+  picture: /assets/images/guests/guest_robert_miller_smith.jpg
 don_goodwin:
   name: Don Goodwin
-  picture: /images/guest_don_goodwin.jpg
+  picture: /assets/images/guests/guest_don_goodwin.jpg
 derek_wrigley:
   name: Derek Wrigley
-  picture: /images/guest_derek_wrigley.jpg
+  picture: /assets/images/guests/guest_derek_wrigley.jpg
 david_terry:
   name: David Terry
-  picture: /images/guest_david_terry.jpg
+  picture: /assets/images/guests/guest_david_terry.jpg
 jeff_newman:
   name: Jeffrey Newman
-  picture: /images/guest_jeff_newman.jpg
+  picture: /assets/images/guests/guest_jeff_newman.jpg
 mary_featherston:
   name: Mary Featherston
-  picture: /images/guest_mary_featherston.jpg
+  picture: /assets/images/guests/guest_mary_featherston.jpg
 phil_zmood:
   name: Phil Zmood
-  picture: /images/guest_phil_zmood.jpg
+  picture: /assets/images/guests/guest_phil_zmood.jpg
 dario_zoureff:
   name: Dario Zoureff
-  picture: /images/guest_dario_zoureff.jpg
+  picture: /assets/images/guests/guest_dario_zoureff.jpg
 colin_wood:
   name: Colin Wood
-  picture: /images/guest_colin_wood.jpg
+  picture: /assets/images/guests/guest_colin_wood.jpg
 rina_cohen:
   name: Rina Cohen
-  picture: /images/guest_rina_cohen.jpg
+  picture: /assets/images/guests/guest_rina_cohen.jpg
 louise_dann:
   name: Louise Dann
-  picture: /images/guest_louise_dann.jpg
+  picture: /assets/images/guests/guest_louise_dann.jpg

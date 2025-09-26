@@ -5,7 +5,7 @@ description: Dialogues with eminent Australian designers
 url: https://designconversations.net
 locale: en-AU
 lang: en-AU
-logo: /images/site-logo-dc.png
+logo: /assets/images/site/site-logo-dc.png
 date_format: "%B %-d, %Y"
 markdown: kramdown
 skin: "/assets/css/skins/light.css"
@@ -62,7 +62,7 @@ twitter:
   username: designconv
 author:
   name: Geoff Fitzpatrick
-  picture: images/author_geoff_fitzpatrick.jpg
+  picture: assets/images/site/author_geoff_fitzpatrick.jpg
   email: mail@designconversations.net
   twitter: designconv
 # Production build settings
@@ -85,7 +85,7 @@ podcast:
       name: Geoff Fitzpatrick
       email: mail@designconversations.net
     type: episodic
-    image: "images/site-logo-dc-itunes.png"
+    image: "assets/images/site/site-logo-dc-itunes.png"
     category: Arts
     subcategory: Design
     explicit: "false"
