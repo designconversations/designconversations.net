@@ -58,8 +58,6 @@ liquid:
   error_mode: strict
 sass:
   sass_dir: _sass
-#disqus:
-#  shortname: # Disqus shortname, e.g. "my_disqus_shortname"
 twitter:
   username: designconv
 author:
@@ -67,12 +65,6 @@ author:
   picture: images/author_geoff_fitzpatrick.jpg
   email: mail@designconversations.net
   twitter: designconv
-# Custom
-#matomo:
-#  domain: sa.j13k.com
-#  siteId: 16
-#  goalIds:
-#    newsletter: 1
 # Production build settings
 theme: jekyll-theme-so-simple
 remote_theme: ~
