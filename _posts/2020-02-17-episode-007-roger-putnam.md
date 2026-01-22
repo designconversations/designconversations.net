@@ -3,6 +3,7 @@ layout: post
 title: '7 &#124; Roger Putnam: Furniture designer'
 date: '2020-02-17'
 guest: roger_putnam
+image: /assets/images/episodes/episode-007.jpg
 categories:
   - Episodes
 tags:

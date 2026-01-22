@@ -3,6 +3,7 @@ layout: post
 title: '15 &#124; Colin Wood: Design publisher'
 date: '2024-06-11'
 guest: colin_wood
+image: /assets/images/episodes/episode-015.jpg
 categories:
   - Episodes
 tags:

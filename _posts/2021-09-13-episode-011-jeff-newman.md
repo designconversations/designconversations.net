@@ -3,6 +3,7 @@ layout: post
 title: '11 &#124; Jeffrey Newman: Industrial Design Council of Australia'
 date: '2021-09-13'
 guest: jeff_newman
+image: /assets/images/episodes/episode-011.jpg
 categories:
   - Episodes
 tags:

@@ -3,6 +3,7 @@ layout: post
 title: '17 &#124; Louise Dann: A journey through design, culture & sustainability'
 date: '2025-04-07'
 guest: louise_dann
+image: /assets/images/episodes/episode-017.jpg
 categories:
   - Episodes
 tags:

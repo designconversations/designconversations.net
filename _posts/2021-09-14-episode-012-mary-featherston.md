@@ -3,6 +3,7 @@ layout: post
 title: '12 &#124; Mary Featherston AM: Interior & furniture designer, early childhood environmental designer'
 date: '2021-09-14'
 guest: mary_featherston
+image: /assets/images/episodes/episode-012.jpg
 categories:
   - Episodes
 tags:

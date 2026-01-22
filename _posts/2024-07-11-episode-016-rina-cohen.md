@@ -3,6 +3,7 @@ layout: post
 title: '16 &#124; Rina Cohen: Interior designer'
 date: '2024-07-11'
 guest: rina_cohen
+image: /assets/images/episodes/episode-016.jpg
 categories:
   - Episodes
 tags:

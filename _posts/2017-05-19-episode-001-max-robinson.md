@@ -3,6 +3,7 @@ layout: post
 title: '1 &#124; Max Robinson: London & beyond'
 date: '2017-05-19'
 guest: max_robinson
+image: /assets/images/episodes/episode-001.jpg
 categories:
   - Episodes
 tags:

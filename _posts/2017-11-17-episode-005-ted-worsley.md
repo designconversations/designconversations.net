@@ -3,6 +3,7 @@ layout: post
 title: '5 &#124; Ted Worsley: Industrial designer & educator'
 date: '2017-11-17'
 guest: ted_worsley
+image: /assets/images/episodes/episode-005.jpg
 categories:
   - Episodes
 tags:

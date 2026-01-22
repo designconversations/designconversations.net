@@ -3,6 +3,7 @@ layout: post
 title: '10 &#124; David Terry: Industrial Design Council of Australia & industrial designer'
 date: '2021-08-24'
 guest: david_terry
+image: /assets/images/episodes/episode-010.jpg
 categories:
   - Episodes
 tags:

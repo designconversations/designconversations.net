@@ -3,6 +3,7 @@ layout: post
 title: '4 &#124; Ian Howard: International connections'
 date: '2017-10-01'
 guest: ian_howard
+image: /assets/images/episodes/episode-004.jpg
 categories:
   - Episodes
 tags:
