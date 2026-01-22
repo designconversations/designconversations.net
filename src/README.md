@@ -45,10 +45,10 @@ record, if they haven't been uploaded already.
 ### Misc
 
 - [ ] Disqus
-- [ ] Podcast feed
-- [ ] Podcast registration
-- [ ] Test Favicons
-- [ ] Test Site
+- [x] Podcast feed
+- [x] Podcast registration
+- [x] Test Favicons
+- [x] Test Site
 - [x] Analytics
 - [x] Favicons
 - [x] Share buttons
