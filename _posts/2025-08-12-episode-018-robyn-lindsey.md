@@ -3,6 +3,7 @@ layout: post
 title: '18 &#124; Robyn Lindsey: Designing across retail, corporate & sustainability'
 date: '2025-08-12'
 guest: robyn_lindsey
+image: /assets/images/episodes/episode-018.jpg
 categories:
   - Episodes
 tags:

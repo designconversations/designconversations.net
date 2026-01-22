@@ -3,6 +3,7 @@ layout: post
 title: '14 &#124; Dario Zoureff: Interior & furniture designer'
 date: '2022-01-14'
 guest: dario_zoureff
+image: /assets/images/episodes/episode-014.jpg
 categories:
   - Episodes
 tags:

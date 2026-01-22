@@ -3,6 +3,7 @@ layout: post
 title: '8 &#124; Robert Miller Smith: Dean & design educator'
 date: '2021-01-31'
 guest: robert_miller_smith
+image: /assets/images/episodes/episode-008.jpg
 categories:
   - Episodes
 tags:

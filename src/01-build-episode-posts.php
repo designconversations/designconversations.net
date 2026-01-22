@@ -51,11 +51,24 @@ foreach ($episodeRecords as $i => $episodeRecord) {
     $frontMatter['title'] = formatEpisodeTitle($episodeRecord, $separator);
     $frontMatter['date'] = $episodeRecord[F_DATE] ?? null;
     $frontMatter['guest'] = $episodeRecord[F_GUEST_ID];
-    // $guestData = Yaml::parseFile('../_data/guests.yml');
-    // $picture = $guestData[$episodeRecord[F_GUEST_ID]]['picture'] ?? null;
-    // if ($picture) {
-    //     $frontMatter['image'] = $picture;
-    // }
+
+    // Generate episode artwork with guest avatar
+    $guestData = Yaml::parseFile(APP_DIR . '/../_data/guests.yml');
+    $guestPicture = $guestData[$episodeRecord[F_GUEST_ID]]['picture'] ?? null;
+    if ($guestPicture) {
+        $guestPhotoPath = realpath(APP_DIR . '/../' . ltrim($guestPicture, '/'));
+        $episodeArtworkFilename = sprintf('episode-%03d.jpg', $episodeRecord[F_EPISODE_ID]);
+        $episodeArtworkPath = APP_DIR . '/../assets/images/episodes/' . $episodeArtworkFilename;
+        $episodeArtworkUrl = '/assets/images/episodes/' . $episodeArtworkFilename;
+
+        if ($guestPhotoPath && generateEpisodeArtwork($episodeRecord, $guestPhotoPath, $episodeArtworkPath)) {
+            $logger->log(LogLevel::INFO, vsprintf('Generated episode artwork %s', [$episodeArtworkFilename]));
+            $frontMatter['image'] = $episodeArtworkUrl;
+        } else {
+            $logger->log(LogLevel::WARNING, vsprintf('Could not generate episode artwork for episode %s', [$episodeRecord[F_EPISODE_ID]]));
+        }
+    }
+
     $frontMatter['categories'] = ['Episodes'];
     $frontMatter['tags'] = $episodeRecord[F_TAGS] ?? [];
     $episodeMp3Info = null;

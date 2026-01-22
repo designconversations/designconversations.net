@@ -3,6 +3,7 @@ layout: post
 title: '2 &#124; Ian Howard: Aristoc & beyond'
 date: '2017-06-02'
 guest: ian_howard
+image: /assets/images/episodes/episode-002.jpg
 categories:
   - Episodes
 tags:

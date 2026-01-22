@@ -3,6 +3,7 @@ layout: post
 title: '3 &#124; David Lancashire: Artist, designer & illustrator'
 date: '2017-08-23'
 guest: david_lancashire
+image: /assets/images/episodes/episode-003.jpg
 categories:
   - Episodes
 tags:

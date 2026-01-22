@@ -3,6 +3,7 @@ layout: post
 title: '999 &#124; Derek Wrigley OAM: Founding designer & architect, Renaissance man'
 date: '2021-08-20'
 guest: derek_wrigley
+image: /assets/images/episodes/episode-999.jpg
 categories:
   - Episodes
 tags:

@@ -3,6 +3,7 @@ layout: post
 title: '13 &#124; Phillip Zmood: Automotive designer'
 date: '2021-10-26'
 guest: phil_zmood
+image: /assets/images/episodes/episode-013.jpg
 categories:
   - Episodes
 tags:
