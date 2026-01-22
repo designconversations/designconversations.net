@@ -232,3 +232,89 @@ function getEpisodeMp3Info(array $episodeRecord, string $origOrEnc = 'enc'): Mp3
     $filename = $realpath . "/" . $mp3FileName;
     return new Mp3Info($filename, true);
 }
+
+/**
+ * Generates episode artwork by compositing guest photo onto podcast logo.
+ *
+ * Creates a 1400x1400 image with the podcast logo as base and a circular
+ * guest avatar in the bottom-right corner.
+ *
+ * @param array  $episodeRecord Episode data containing guest ID
+ * @param string $guestPhotoPath Absolute path to guest photo
+ * @param string $outputPath Absolute path for output image
+ * @param int    $avatarSize Size of the circular avatar in pixels
+ * @param int    $padding Padding from edge in pixels
+ *
+ * @return bool True on success, false on failure
+ */
+function generateEpisodeArtwork(
+    array $episodeRecord,
+    string $guestPhotoPath,
+    string $outputPath,
+    int $avatarSize = 150,
+    int $padding = 60
+): bool {
+    $logoPath = realpath(APP_DIR . '/../assets/images/site/site-logo-dc-itunes.png');
+
+    if (!file_exists($logoPath)) {
+        return false;
+    }
+
+    if (!file_exists($guestPhotoPath)) {
+        return false;
+    }
+
+    // Ensure output directory exists
+    $outputDir = dirname($outputPath);
+    if (!is_dir($outputDir)) {
+        mkdir($outputDir, 0755, true);
+    }
+
+    // Calculate circle centre for the draw command
+    $centre = (int) ($avatarSize / 2);
+    $edge = $centre;
+
+    // Use two-step process for reliable alpha compositing:
+    // Step 1: Create circular avatar as temporary PNG
+    $tempAvatarPath = sys_get_temp_dir() . '/episode_avatar_' . uniqid() . '.png';
+
+    $avatarCommand = sprintf(
+        '/opt/homebrew/bin/magick %s -resize %dx%d^ -gravity center -extent %dx%d ' .
+        '\( +clone -threshold -1 -negate -fill white -draw "circle %d,%d %d,0" \) ' .
+        '-alpha off -compose CopyOpacity -composite %s 2>&1',
+        escapeshellarg($guestPhotoPath),
+        $avatarSize,
+        $avatarSize,
+        $avatarSize,
+        $avatarSize,
+        $centre,
+        $centre,
+        $edge,
+        escapeshellarg($tempAvatarPath)
+    );
+
+    $output = [];
+    $returnCode = 0;
+    exec($avatarCommand, $output, $returnCode);
+
+    if ($returnCode !== 0 || !file_exists($tempAvatarPath)) {
+        return false;
+    }
+
+    // Step 2: Composite avatar onto logo
+    $compositeCommand = sprintf(
+        '/opt/homebrew/bin/magick %s %s -gravity SouthEast -geometry +%d+%d -composite %s 2>&1',
+        escapeshellarg($logoPath),
+        escapeshellarg($tempAvatarPath),
+        $padding,
+        $padding,
+        escapeshellarg($outputPath)
+    );
+
+    exec($compositeCommand, $output, $returnCode);
+
+    // Clean up temp file
+    @unlink($tempAvatarPath);
+
+    return $returnCode === 0 && file_exists($outputPath);
+}
