@@ -14,6 +14,7 @@ require __DIR__ . '/bootstrap.php';
 $appLogChannel = 'prepare-mp3s';
 $logger = getLogger('debug', new CLImate(), 'Prepare MP3s');
 $episodeRecords = getEpisodeRecords($logger);
+$forceFlag = hasForceFlag($argv);
 
 // List episode data
 outputEpisodeData($episodeRecords, new CLImate());
@@ -23,6 +24,11 @@ foreach ($episodeRecords as $i => $episodeRecord) {
     $episodeId = $episodeRecord[F_EPISODE_ID];
     if (!in_array($episodeRecord[F_STATE], [STATE_DRAFT, STATE_PUBLISHED])) {
         $logger->info(sprintf('Skipping episode %d, state is %s', $episodeId, $episodeRecord[F_STATE]));
+        continue;
+    }
+    // Skip episodes already in podcast feed unless --force is used
+    if (($episodeRecord[F_INCLUDE_IN_PODCAST_FEED] ?? false) && !$forceFlag) {
+        $logger->info(sprintf('Skipping episode %d, already in podcast feed (use --force to override)', $episodeId));
         continue;
     }
     $logger->info(vsprintf('Processing episode %s', [$episodeId]));
@@ -59,7 +65,7 @@ foreach ($episodeRecords as $i => $episodeRecord) {
         $episodeComment = formatEpisodeNotesAsComment($episodeRecord, FORMAT_COMMENTS_OPTION_STRIP_PARAGRAPHS);
 
         // Build the command to tag
-        $command = new CommandBuilder('/opt/homebrew/bin/eyeD3');
+        $command = new CommandBuilder('eyeD3');
         $command
             ->addArgument('remove-all')
             ->addArgument('to-v2.4')

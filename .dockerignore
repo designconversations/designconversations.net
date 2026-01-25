@@ -1,0 +1,30 @@
+# Build output
+_site/
+
+# Dependencies (reinstalled in container)
+vendor/
+src/vendor/
+
+# Large media files
+src/mp3s/
+
+# Git
+.git/
+.gitignore
+
+# IDE and editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Devcontainer persistence (user data)
+.devcontainer/persist/
+
+# Temporary files
+tmp/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

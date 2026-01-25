@@ -17,13 +17,19 @@ $logger = getLogger('debug', new CLImate(), 'Upload MP3s');
 $episodeRecords = getEpisodeRecords($logger);
 
 // CLI options
-$metadataOnly = isset($argv[1]) && $argv[1] == '--metadataOnly';
+$metadataOnly = in_array('--metadataOnly', $argv, true);
+$forceFlag = hasForceFlag($argv);
 
 // Process episode MP3s
 foreach ($episodeRecords as $i => $episodeRecord) {
     $episodeId = $episodeRecord[F_EPISODE_ID];
     if ($episodeRecord[F_STATE] != STATE_PUBLISHED) {
         $logger->info(sprintf('Skipping episode %d, state is %s', $episodeId, $episodeRecord[F_STATE]));
+        continue;
+    }
+    // Skip episodes already in podcast feed unless --force is used
+    if (($episodeRecord[F_INCLUDE_IN_PODCAST_FEED] ?? false) && !$forceFlag) {
+        $logger->info(sprintf('Skipping episode %d, already in podcast feed (use --force to override)', $episodeId));
         continue;
     }
     $logger->info(vsprintf('Processing episode %s', [$episodeId]));
@@ -80,7 +86,7 @@ foreach ($episodeRecords as $i => $episodeRecord) {
         }
 
         // Build the command to upload
-        $command = new Command('/opt/homebrew/bin/ia');
+        $command = new Command('ia');
         if ($metadataOnly) {
             $command->addSubCommand(new SubCommand('metadata'));
             $command->addSubCommand(new SubCommand($internetArchiveItemId));
