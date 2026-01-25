@@ -8,6 +8,7 @@ lang: en-AU
 logo: /assets/images/site/site-logo-dc.png
 date_format: "%B %-d, %Y"
 markdown: kramdown
+incremental: true
 skin: "/assets/css/skins/light.css"
 google_fonts:
   - name: "Source Sans Pro"
@@ -28,8 +29,14 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - .bundle/
+  - .claude/
+  - .devcontainer/
   - .idea/
+  - .ruby-lsp/
+  - .sass-cache/
   - src/
+  - tmp/
 footer_links:
   - title: Apple
     url: https://podcasts.apple.com/au/podcast/design-conversations/id1591996555
