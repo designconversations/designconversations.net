@@ -14,13 +14,22 @@ require __DIR__ . '/bootstrap.php';
 $appLogChannel = 'build-episode-posts';
 $logger = getLogger('debug', new CLImate(), 'Build Episode Posts');
 $episodeRecords = getEpisodeRecords($logger);
+$forceFlag = hasForceFlag($argv);
 
 // List episode data
 outputEpisodeData($episodeRecords, new CLImate());
 
 // Process episode data
 foreach ($episodeRecords as $i => $episodeRecord) {
-    $logger->log(LogLevel::INFO, vsprintf('Processing episode %s', [$episodeRecord[F_EPISODE_ID]]));
+    $episodeId = $episodeRecord[F_EPISODE_ID];
+
+    // Skip episodes already in podcast feed unless --force is used
+    if (($episodeRecord[F_INCLUDE_IN_PODCAST_FEED] ?? false) && !$forceFlag) {
+        $logger->log(LogLevel::INFO, sprintf('Skipping episode %d, already in podcast feed (use --force to override)', $episodeId));
+        continue;
+    }
+
+    $logger->log(LogLevel::INFO, vsprintf('Processing episode %s', [$episodeId]));
 
     // File path
     switch ($episodeRecord[F_STATE]) {

@@ -3,18 +3,16 @@
   "description": "Build tooling for generating podcast episode data from spreadsheet data",
   "license": "MIT",
   "require": {
-    "adambrett/shell-wrapper": "dev-main",
+    "adambrett/shell-wrapper": "^1.0",
     "armetiz/airtable-php": "dev-master",
     "b-b3rn4rd/phplame": "dev-master",
-    "erusev/parsedown": "dev-master",
-    "josegonzalez/dotenv": "dev-master",
-    "league/climate": "dev-master",
-    "league/html-to-markdown": "^4.9@dev",
-    "symfony/yaml": "^7",
-    "wapmorgan/mp3info": "dev-master"
+    "erusev/parsedown": "^1.7",
+    "josegonzalez/dotenv": "^4.0",
+    "league/climate": "^3.0",
+    "league/html-to-markdown": "^5.0",
+    "symfony/yaml": "^7.0",
+    "wapmorgan/mp3info": "^0.1"
   },
-  "require-dev": {
-    "symplify/easy-coding-standard": "dev-main"
-  },
-  "minimum-stability": "dev"
+  "minimum-stability": "stable",
+  "prefer-stable": true
 }

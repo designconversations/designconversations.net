@@ -15,6 +15,7 @@ require __DIR__ . '/bootstrap.php';
 $appLogChannel = 'encode-mp3s';
 $logger = getLogger('debug', new CLImate(), 'Encode MP3s');
 $episodeRecords = getEpisodeRecords($logger);
+$forceFlag = hasForceFlag($argv);
 
 // List episode data
 outputEpisodeData($episodeRecords, new CLImate());
@@ -26,13 +27,18 @@ $lameEncodingBitRate = 128;
 $lameEncoding = new CBR();
 $lameEncoding->setBitrate($lameEncodingBitRate);
 $lameSettings = new Settings($lameEncoding);
-$lame = new Lame('/opt/homebrew/bin/lame', $lameSettings);
+$lame = new Lame('lame', $lameSettings);
 
 // Process episode MP3s
 foreach ($episodeRecords as $i => $episodeRecord) {
     $episodeId = $episodeRecord[F_EPISODE_ID];
     if (!in_array($episodeRecord[F_STATE], [STATE_DRAFT, STATE_PUBLISHED])) {
         $logger->info(sprintf('Skipping episode %d, state is %s', $episodeId, $episodeRecord[F_STATE]));
+        continue;
+    }
+    // Skip episodes already in podcast feed unless --force is used
+    if (($episodeRecord[F_INCLUDE_IN_PODCAST_FEED] ?? false) && !$forceFlag) {
+        $logger->info(sprintf('Skipping episode %d, already in podcast feed (use --force to override)', $episodeId));
         continue;
     }
     $logger->info(vsprintf('Processing episode %d', [$episodeId]));

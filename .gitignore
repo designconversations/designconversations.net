@@ -1,7 +1,9 @@
-_site
+.claude/
+.devcontainer/persist/
 .DS_Store
 .idea
 .jekyll-metadata
 .sass-cache
+_site
 tmp/
 vendor

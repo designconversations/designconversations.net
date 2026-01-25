@@ -35,6 +35,18 @@ define('APP_DIR', realpath(__DIR__));
 require __DIR__ . '/vendor/autoload.php';
 
 /**
+ * Check if --force flag is present in CLI arguments.
+ *
+ * @param array $argv Command line arguments
+ *
+ * @return bool
+ */
+function hasForceFlag(array $argv): bool
+{
+    return in_array('--force', $argv, true);
+}
+
+/**
  * @param string  $logLevel
  * @param CLImate $climate
  * @param string  $appTitle
@@ -73,7 +85,7 @@ function getEpisodeRecords(Logger $logger)
     ];
 
     // Config
-    (new DotenvLoader('.env'))
+    (new DotenvLoader(APP_DIR . '/.env'))
         ->parse()
         ->toEnv();
 
@@ -279,7 +291,7 @@ function generateEpisodeArtwork(
     $tempAvatarPath = sys_get_temp_dir() . '/episode_avatar_' . uniqid() . '.png';
 
     $avatarCommand = sprintf(
-        '/opt/homebrew/bin/magick %s -resize %dx%d^ -gravity center -extent %dx%d ' .
+        'convert %s -resize %dx%d^ -gravity center -extent %dx%d ' .
         '\( +clone -threshold -1 -negate -fill white -draw "circle %d,%d %d,0" \) ' .
         '-alpha off -compose CopyOpacity -composite %s 2>&1',
         escapeshellarg($guestPhotoPath),
@@ -303,7 +315,7 @@ function generateEpisodeArtwork(
 
     // Step 2: Composite avatar onto logo
     $compositeCommand = sprintf(
-        '/opt/homebrew/bin/magick %s %s -gravity SouthEast -geometry +%d+%d -composite %s 2>&1',
+        'convert %s %s -gravity SouthEast -geometry +%d+%d -composite %s 2>&1',
         escapeshellarg($logoPath),
         escapeshellarg($tempAvatarPath),
         $padding,

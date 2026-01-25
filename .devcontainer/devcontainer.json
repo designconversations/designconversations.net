@@ -1,0 +1,46 @@
+{
+  "name": "Design Conversations Dev",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+
+  "mounts": [
+    "source=${localWorkspaceFolder}/.devcontainer/persist/zsh_history,target=/root/.zsh_history,type=bind",
+    "source=${localWorkspaceFolder}/.devcontainer/persist/claude,target=/root/.claude,type=bind",
+    "source=${localWorkspaceFolder}/.devcontainer/persist/gh,target=/root/.config/gh,type=bind",
+    "source=${localWorkspaceFolder}/.devcontainer/persist/internetarchive,target=/root/.config/internetarchive,type=bind"
+  ],
+
+  "initializeCommand": "mkdir -p .devcontainer/persist/claude .devcontainer/persist/gh .devcontainer/persist/internetarchive && touch .devcontainer/persist/zsh_history",
+
+  "features": {
+    "ghcr.io/anthropics/devcontainer-features/claude-code:latest": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "installOhMyZsh": true,
+      "configureZshAsDefaultShell": true
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "shopify.ruby-lsp",
+        "bmewburn.vscode-intelephense-client",
+        "ms-python.python",
+        "redhat.vscode-yaml",
+        "davidanson.vscode-markdownlint"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh"
+      }
+    }
+  },
+
+  "postCreateCommand": "bundle install && composer install --working-dir=src",
+
+  "forwardPorts": [4000]
+}
