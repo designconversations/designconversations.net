@@ -3,7 +3,6 @@ layout: post
 title: '12 &#124; Mary Featherston AM: Interior & furniture designer, early childhood environmental designer'
 date: '2021-09-14'
 guest: mary_featherston
-image: /assets/images/episodes/episode-012.jpg
 categories:
   - Episodes
 tags:
@@ -19,6 +18,7 @@ podcast:
     duration: 2780
     explicit: 'false'
     block: 'false'
+    image: /assets/images/episodes/episode-012.jpg
   length: 55679599
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2021-09-14-episode-012-mary-featherston/2021-09-14-episode-012-mary-featherston.mp3'

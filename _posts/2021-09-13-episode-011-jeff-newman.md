@@ -3,7 +3,6 @@ layout: post
 title: '11 &#124; Jeffrey Newman: Industrial Design Council of Australia'
 date: '2021-09-13'
 guest: jeff_newman
-image: /assets/images/episodes/episode-011.jpg
 categories:
   - Episodes
 tags:
@@ -18,6 +17,7 @@ podcast:
     duration: 3391
     explicit: 'false'
     block: 'false'
+    image: /assets/images/episodes/episode-011.jpg
   length: 67920857
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2021-09-13-episode-011-jeff-newman/2021-09-13-episode-011-jeff-newman.mp3'

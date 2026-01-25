@@ -3,7 +3,6 @@ layout: post
 title: '14 &#124; Dario Zoureff: Interior & furniture designer'
 date: '2022-01-14'
 guest: dario_zoureff
-image: /assets/images/episodes/episode-014.jpg
 categories:
   - Episodes
 tags:
@@ -18,6 +17,7 @@ podcast:
     duration: 2496
     explicit: 'false'
     block: 'false'
+    image: /assets/images/episodes/episode-014.jpg
   length: 28478113
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2022-01-14-episode-014-dario-zoureff/2022-01-14-episode-014-dario-zoureff.mp3'

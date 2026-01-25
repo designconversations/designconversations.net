@@ -3,7 +3,6 @@ layout: post
 title: '18 &#124; Robyn Lindsey: Designing across retail, corporate & sustainability'
 date: '2025-08-12'
 guest: robyn_lindsey
-image: /assets/images/episodes/episode-018.jpg
 categories:
   - Episodes
 tags:
@@ -19,6 +18,7 @@ podcast:
     duration: 1981
     explicit: 'false'
     block: 'false'
+    image: /assets/images/episodes/episode-018.jpg
   length: 31713210
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2025-08-12-episode-018-robyn-lindsey/2025-08-12-episode-018-robyn-lindsey.mp3'

@@ -3,7 +3,6 @@ layout: post
 title: '3 &#124; David Lancashire: Artist, designer & illustrator'
 date: '2017-08-23'
 guest: david_lancashire
-image: /assets/images/episodes/episode-003.jpg
 categories:
   - Episodes
 tags:
@@ -20,6 +19,7 @@ podcast:
     duration: 2216
     explicit: 'false'
     block: 'false'
+    image: /assets/images/episodes/episode-003.jpg
   length: 44395107
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2017-08-23-episode-003-david-lancashire/2017-08-23-episode-003-david-lancashire.mp3'

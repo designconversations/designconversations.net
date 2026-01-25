@@ -3,7 +3,6 @@ layout: post
 title: '6 &#124; Kathy Demos: Design director'
 date: '2020-02-03'
 guest: kathy_demos
-image: /assets/images/episodes/episode-006.jpg
 categories:
   - Episodes
 tags:
@@ -19,6 +18,7 @@ podcast:
     duration: 2798
     explicit: 'false'
     block: 'false'
+    image: /assets/images/episodes/episode-006.jpg
   length: 56035482
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2020-02-03-episode-006-kathy-demos/2020-02-03-episode-006-kathy-demos.mp3'

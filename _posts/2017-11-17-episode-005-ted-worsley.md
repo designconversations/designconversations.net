@@ -3,7 +3,6 @@ layout: post
 title: '5 &#124; Ted Worsley: Industrial designer & educator'
 date: '2017-11-17'
 guest: ted_worsley
-image: /assets/images/episodes/episode-005.jpg
 categories:
   - Episodes
 tags:
@@ -18,6 +17,7 @@ podcast:
     duration: 3404
     explicit: 'false'
     block: 'false'
+    image: /assets/images/episodes/episode-005.jpg
   length: 68165834
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2017-11-17-episode-005-ted-worsley/2017-11-17-episode-005-ted-worsley.mp3'

@@ -3,7 +3,6 @@ layout: post
 title: '2 &#124; Ian Howard: Aristoc & beyond'
 date: '2017-06-02'
 guest: ian_howard
-image: /assets/images/episodes/episode-002.jpg
 categories:
   - Episodes
 tags:
@@ -17,6 +16,7 @@ podcast:
     duration: 5162
     explicit: 'false'
     block: 'false'
+    image: /assets/images/episodes/episode-002.jpg
   length: 103368987
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2017-06-02-episode-002-ian-howard/2017-06-02-episode-002-ian-howard.mp3'

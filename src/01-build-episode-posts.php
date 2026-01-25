@@ -72,7 +72,7 @@ foreach ($episodeRecords as $i => $episodeRecord) {
 
         if ($guestPhotoPath && generateEpisodeArtwork($episodeRecord, $guestPhotoPath, $episodeArtworkPath)) {
             $logger->log(LogLevel::INFO, vsprintf('Generated episode artwork %s', [$episodeArtworkFilename]));
-            $frontMatter['image'] = $episodeArtworkUrl;
+            $episodeArtworkGenerated = $episodeArtworkUrl;
         } else {
             $logger->log(LogLevel::WARNING, vsprintf('Could not generate episode artwork for episode %s', [$episodeRecord[F_EPISODE_ID]]));
         }
@@ -106,6 +106,9 @@ foreach ($episodeRecords as $i => $episodeRecord) {
         ),
         'includeInFeed' => $episodeRecord[F_INCLUDE_IN_PODCAST_FEED] ?? false,
     ];
+    if (isset($episodeArtworkGenerated)) {
+        $frontMatter['podcast']['itunes']['image'] = $episodeArtworkGenerated;
+    }
     $frontMatterStr = "---\n" . Yaml::dump($frontMatter, 3, 2) . "---\n";
 
     // Main post content

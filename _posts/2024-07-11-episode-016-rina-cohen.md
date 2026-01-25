@@ -3,7 +3,6 @@ layout: post
 title: '16 &#124; Rina Cohen: Interior designer'
 date: '2024-07-11'
 guest: rina_cohen
-image: /assets/images/episodes/episode-016.jpg
 categories:
   - Episodes
 tags:
@@ -17,6 +16,7 @@ podcast:
     duration: 1925
     explicit: 'false'
     block: 'false'
+    image: /assets/images/episodes/episode-016.jpg
   length: 37004157
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2024-07-11-episode-016-rina-cohen/2024-07-11-episode-016-rina-cohen.mp3'

@@ -53,7 +53,7 @@
       <itunes:duration>{{ post.podcast.itunes.duration }}</itunes:duration>
       <itunes:explicit>{{ post.podcast.itunes.explicit }}</itunes:explicit>
       <itunes:block>{{ post.podcast.itunes.block }}</itunes:block>
-      {% if post.image %}<itunes:image href="{{ post.image | absolute_url }}"/>{% endif %}
+      {% if post.podcast.itunes.image %}<itunes:image href="{{ post.podcast.itunes.image | absolute_url }}"/>{% endif %}
       <!-- Undocumented -->
       <itunes:summary>{{ post.excerpt | strip_html | normalize_whitespace }}</itunes:summary>
       <itunes:keywords>{{ post.tags | join: "," }}</itunes:keywords>

@@ -3,7 +3,6 @@ layout: post
 title: '1 &#124; Max Robinson: London & beyond'
 date: '2017-05-19'
 guest: max_robinson
-image: /assets/images/episodes/episode-001.jpg
 categories:
   - Episodes
 tags:
@@ -20,6 +19,7 @@ podcast:
     duration: 2788
     explicit: 'false'
     block: 'false'
+    image: /assets/images/episodes/episode-001.jpg
   length: 55842535
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2017-05-19-episode-001-max-robinson/2017-05-19-episode-001-max-robinson.mp3'
