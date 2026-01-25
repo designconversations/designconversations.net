@@ -3,7 +3,6 @@ layout: post
 title: '15 &#124; Colin Wood: Design publisher'
 date: '2024-06-11'
 guest: colin_wood
-image: /assets/images/episodes/episode-015.jpg
 categories:
   - Episodes
 tags:
@@ -17,6 +16,7 @@ podcast:
     duration: 2608
     explicit: 'false'
     block: 'false'
+    image: /assets/images/episodes/episode-015.jpg
   length: 41743070
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2024-06-11-episode-015-colin-wood/2024-06-11-episode-015-colin-wood.mp3'

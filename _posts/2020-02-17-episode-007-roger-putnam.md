@@ -3,7 +3,6 @@ layout: post
 title: '7 &#124; Roger Putnam: Furniture designer'
 date: '2020-02-17'
 guest: roger_putnam
-image: /assets/images/episodes/episode-007.jpg
 categories:
   - Episodes
 tags:
@@ -20,6 +19,7 @@ podcast:
     duration: 1862
     explicit: 'false'
     block: 'false'
+    image: /assets/images/episodes/episode-007.jpg
   length: 37302509
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2020-02-17-episode-007-roger-putnam/2020-02-17-episode-007-roger-putnam.mp3'

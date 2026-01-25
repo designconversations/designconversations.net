@@ -3,7 +3,6 @@ layout: post
 title: '17 &#124; Louise Dann: A journey through design, culture & sustainability'
 date: '2025-04-07'
 guest: louise_dann
-image: /assets/images/episodes/episode-017.jpg
 categories:
   - Episodes
 tags:
@@ -19,6 +18,7 @@ podcast:
     duration: 1280
     explicit: 'false'
     block: 'false'
+    image: /assets/images/episodes/episode-017.jpg
   length: 20492939
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2025-04-07-episode-017-louise-dann/2025-04-07-episode-017-louise-dann.mp3'

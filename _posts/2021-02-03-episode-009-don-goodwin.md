@@ -3,7 +3,6 @@ layout: post
 title: '9 &#124; Don Goodwin: Conran design director'
 date: '2021-02-03'
 guest: don_goodwin
-image: /assets/images/episodes/episode-009.jpg
 categories:
   - Episodes
 tags:
@@ -20,6 +19,7 @@ podcast:
     duration: 5189
     explicit: 'false'
     block: 'false'
+    image: /assets/images/episodes/episode-009.jpg
   length: 103910658
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2021-02-03-episode-009-don-goodwin/2021-02-03-episode-009-don-goodwin.mp3'

@@ -3,7 +3,6 @@ layout: post
 title: '10 &#124; David Terry: Industrial Design Council of Australia & industrial designer'
 date: '2021-08-24'
 guest: david_terry
-image: /assets/images/episodes/episode-010.jpg
 categories:
   - Episodes
 tags:
@@ -19,6 +18,7 @@ podcast:
     duration: 3289
     explicit: 'false'
     block: 'false'
+    image: /assets/images/episodes/episode-010.jpg
   length: 37472737
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2021-08-24-episode-010-david-terry/2021-08-24-episode-010-david-terry.mp3'

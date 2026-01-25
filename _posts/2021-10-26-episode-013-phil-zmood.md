@@ -3,7 +3,6 @@ layout: post
 title: '13 &#124; Phillip Zmood: Automotive designer'
 date: '2021-10-26'
 guest: phil_zmood
-image: /assets/images/episodes/episode-013.jpg
 categories:
   - Episodes
 tags:
@@ -18,6 +17,7 @@ podcast:
     duration: 2899
     explicit: 'false'
     block: 'false'
+    image: /assets/images/episodes/episode-013.jpg
   length: 58062306
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2021-10-26-episode-013-phil-zmood/2021-10-26-episode-013-phil-zmood.mp3'

@@ -3,7 +3,6 @@ layout: post
 title: '4 &#124; Ian Howard: International connections'
 date: '2017-10-01'
 guest: ian_howard
-image: /assets/images/episodes/episode-004.jpg
 categories:
   - Episodes
 tags:
@@ -17,6 +16,7 @@ podcast:
     duration: 2811
     explicit: 'false'
     block: 'false'
+    image: /assets/images/episodes/episode-004.jpg
   length: 56302870
   type: audio/mpeg
   url: 'https://archive.org/download/designconv-2017-10-01-episode-004-ian-howard/2017-10-01-episode-004-ian-howard.mp3'
