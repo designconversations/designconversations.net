@@ -259,6 +259,51 @@ function getEpisodeMp3Info(array $episodeRecord, string $origOrEnc = 'enc'): Mp3
  *
  * @return bool True on success, false on failure
  */
+/**
+ * Parses a field value from CLI string input to the appropriate type.
+ *
+ * @param string $field The field name
+ * @param string $value The string value from CLI
+ *
+ * @return mixed The parsed value (bool, int, array, or string)
+ */
+function parseFieldValue(string $field, string $value): mixed
+{
+    // Boolean fields
+    if ($field === F_INCLUDE_IN_PODCAST_FEED) {
+        return in_array(strtolower($value), ['true', '1', 'yes'], true);
+    }
+
+    // Numeric fields
+    if (in_array($field, [F_EPISODE_ID, F_SEASON_NUM], true)) {
+        return (int) $value;
+    }
+
+    // Array fields (comma-separated)
+    if ($field === F_TAGS) {
+        return array_map('trim', explode(',', $value));
+    }
+
+    // String fields
+    return $value;
+}
+
+/**
+ * Truncates a string to a maximum length, adding ellipsis if truncated.
+ *
+ * @param string $string The string to truncate
+ * @param int    $length Maximum length including ellipsis
+ *
+ * @return string The truncated string
+ */
+function truncate(string $string, int $length): string
+{
+    if (strlen($string) <= $length) {
+        return $string;
+    }
+    return substr($string, 0, $length - 3) . '...';
+}
+
 function generateEpisodeArtwork(
     array $episodeRecord,
     string $guestPhotoPath,
