@@ -185,4 +185,44 @@ class EpisodeDataTest extends TestCase
         $this->assertSame(19, $defaults[F_EPISODE_ID]);
         $this->assertSame('mimmo_cozzolino', $defaults[F_GUEST_ID]);
     }
+
+    public function testFormatRecordsForDumpReturnsJsonEncodableArray(): void
+    {
+        $command = new EpisodeDataCommand();
+
+        $records = [
+            [
+                F_EPISODE_ID => 1,
+                F_TITLE => 'Test Episode',
+                F_TAGS => ['design', 'art'],
+                F_INCLUDE_IN_PODCAST_FEED => true,
+            ],
+            [
+                F_EPISODE_ID => 2,
+                F_TITLE => 'Another Episode',
+                F_TAGS => ['illustration'],
+                F_INCLUDE_IN_PODCAST_FEED => false,
+            ],
+        ];
+
+        $dump = $command->formatRecordsForDump($records);
+
+        $this->assertIsArray($dump);
+        $this->assertArrayHasKey('exported_at', $dump);
+        $this->assertArrayHasKey('episodes', $dump);
+        $this->assertCount(2, $dump['episodes']);
+
+        // Verify JSON encoding works
+        $json = json_encode($dump, JSON_PRETTY_PRINT);
+        $this->assertNotFalse($json);
+    }
+
+    public function testGetDumpFilenameIncludesTimestamp(): void
+    {
+        $command = new EpisodeDataCommand();
+
+        $filename = $command->getDumpFilename();
+
+        $this->assertMatchesRegularExpression('/^airtable-dump-\d{4}-\d{2}-\d{2}T\d{6}\.json$/', $filename);
+    }
 }

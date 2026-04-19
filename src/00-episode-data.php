@@ -66,6 +66,10 @@ switch ($cmd) {
         deleteEpisode($airtable, $table, $climate, (int) $args[0]);
         break;
 
+    case 'dump':
+        dumpEpisodes($airtable, $table, $climate, $command, $args[0] ?? null);
+        break;
+
     case 'fields':
         $climate->out('<bold>Editable fields:</bold>');
         foreach ($command->getEditableFields() as $field) {
@@ -92,6 +96,7 @@ function showHelp(CLImate $climate): void
     $climate->out('  create <episodeId> [guestId]      Create a new episode record');
     $climate->out('  update <episodeId> <field> <val>  Update a field value');
     $climate->out('  delete <episodeId>                Delete an episode record');
+    $climate->out('  dump [filename]                   Export all episodes to JSON');
     $climate->out('  fields                            List editable fields');
     $climate->out('  help                              Show this help message');
     $climate->out('');
@@ -102,6 +107,8 @@ function showHelp(CLImate $climate): void
     $climate->out('  00-episode-data.php update 19 title "Mimmo Cozzolino: Poster art"');
     $climate->out('  00-episode-data.php update 19 state Draft');
     $climate->out('  00-episode-data.php update 19 tags "graphic-design,illustration"');
+    $climate->out('  00-episode-data.php dump');
+    $climate->out('  00-episode-data.php dump backup.json');
 }
 
 function listEpisodes(Airtable $airtable, string $table, CLImate $climate, EpisodeDataCommand $command): void
@@ -219,6 +226,35 @@ function deleteEpisode(Airtable $airtable, string $table, CLImate $climate, int 
         $climate->info("Deleted episode $episodeId");
     } catch (Exception $e) {
         $climate->error('Failed to delete episode: ' . $e->getMessage());
+        exit(1);
+    }
+}
+
+function dumpEpisodes(Airtable $airtable, string $table, CLImate $climate, EpisodeDataCommand $command, ?string $filename): void
+{
+    try {
+        $records = $airtable->findRecords($table, []);
+        $episodes = [];
+
+        foreach ($records as $record) {
+            $episodes[] = $record->getFields();
+        }
+
+        // Sort by episode ID
+        usort($episodes, fn($a, $b) => ($a[F_EPISODE_ID] ?? 0) <=> ($b[F_EPISODE_ID] ?? 0));
+
+        $dump = $command->formatRecordsForDump($episodes);
+        $json = json_encode($dump, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+
+        // Determine output file
+        $outputFile = $filename ?? $command->getDumpFilename();
+        $outputPath = APP_DIR . '/dumps/' . $outputFile;
+
+        file_put_contents($outputPath, $json);
+
+        $climate->info("Exported " . count($episodes) . " episodes to $outputFile");
+    } catch (Exception $e) {
+        $climate->error('Failed to dump episodes: ' . $e->getMessage());
         exit(1);
     }
 }

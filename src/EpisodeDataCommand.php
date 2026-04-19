@@ -88,4 +88,17 @@ class EpisodeDataCommand
 
         return $fields;
     }
+
+    public function formatRecordsForDump(array $records): array
+    {
+        return [
+            'exported_at' => date('c'),
+            'episodes' => $records,
+        ];
+    }
+
+    public function getDumpFilename(): string
+    {
+        return 'airtable-dump-' . date('Y-m-d\THis') . '.json';
+    }
 }
