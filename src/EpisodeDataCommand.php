@@ -101,4 +101,17 @@ class EpisodeDataCommand
     {
         return 'airtable-dump-' . date('Y-m-d\THis') . '.json';
     }
+
+    public function getSchemaDumpFilename(): string
+    {
+        return 'airtable-schema-' . date('Y-m-d\THis') . '.json';
+    }
+
+    public function formatSchemaForDump(array $rawSchema): array
+    {
+        return [
+            'exported_at' => date('c'),
+            'schema' => $rawSchema,
+        ];
+    }
 }

@@ -225,4 +225,33 @@ class EpisodeDataTest extends TestCase
 
         $this->assertMatchesRegularExpression('/^airtable-dump-\d{4}-\d{2}-\d{2}T\d{6}\.json$/', $filename);
     }
+
+    public function testGetSchemaDumpFilenameIncludesTimestamp(): void
+    {
+        $command = new EpisodeDataCommand();
+
+        $filename = $command->getSchemaDumpFilename();
+
+        $this->assertMatchesRegularExpression('/^airtable-schema-\d{4}-\d{2}-\d{2}T\d{6}\.json$/', $filename);
+    }
+
+    public function testFormatSchemaForDumpWrapsWithMetadata(): void
+    {
+        $command = new EpisodeDataCommand();
+
+        $rawSchema = [
+            'tables' => [
+                ['id' => 'tbl123', 'name' => 'episodes', 'fields' => []],
+            ],
+        ];
+
+        $dump = $command->formatSchemaForDump($rawSchema);
+
+        $this->assertArrayHasKey('exported_at', $dump);
+        $this->assertArrayHasKey('schema', $dump);
+        $this->assertSame($rawSchema, $dump['schema']);
+
+        $json = json_encode($dump, JSON_PRETTY_PRINT);
+        $this->assertNotFalse($json);
+    }
 }

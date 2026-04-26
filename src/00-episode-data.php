@@ -70,6 +70,10 @@ switch ($cmd) {
         dumpEpisodes($airtable, $table, $climate, $command, $args[0] ?? null);
         break;
 
+    case 'dump-schema':
+        dumpSchema($climate, $command, $args[0] ?? null);
+        break;
+
     case 'fields':
         $climate->out('<bold>Editable fields:</bold>');
         foreach ($command->getEditableFields() as $field) {
@@ -97,6 +101,7 @@ function showHelp(CLImate $climate): void
     $climate->out('  update <episodeId> <field> <val>  Update a field value');
     $climate->out('  delete <episodeId>                Delete an episode record');
     $climate->out('  dump [filename]                   Export all episodes to JSON');
+    $climate->out('  dump-schema [filename]            Export Airtable base schema to JSON');
     $climate->out('  fields                            List editable fields');
     $climate->out('  help                              Show this help message');
     $climate->out('');
@@ -109,6 +114,7 @@ function showHelp(CLImate $climate): void
     $climate->out('  00-episode-data.php update 19 tags "graphic-design,illustration"');
     $climate->out('  00-episode-data.php dump');
     $climate->out('  00-episode-data.php dump backup.json');
+    $climate->out('  00-episode-data.php dump-schema');
 }
 
 function listEpisodes(Airtable $airtable, string $table, CLImate $climate, EpisodeDataCommand $command): void
@@ -228,6 +234,41 @@ function deleteEpisode(Airtable $airtable, string $table, CLImate $climate, int 
         $climate->error('Failed to delete episode: ' . $e->getMessage());
         exit(1);
     }
+}
+
+function dumpSchema(CLImate $climate, EpisodeDataCommand $command, ?string $filename): void
+{
+    $baseId = $_ENV['AIRTABLE_BASE'];
+    $apiKey = $_ENV['AIRTABLE_KEY'];
+    $url = "https://api.airtable.com/v0/meta/bases/{$baseId}/tables";
+
+    $ch = curl_init($url);
+    curl_setopt_array($ch, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_HTTPHEADER => ["Authorization: Bearer {$apiKey}"],
+    ]);
+
+    $response = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    if ($httpCode !== 200) {
+        $error = json_decode($response, true)['error']['message'] ?? "HTTP $httpCode";
+        $climate->error("Failed to fetch schema: $error");
+        exit(1);
+    }
+
+    $rawSchema = json_decode($response, true);
+    $dump = $command->formatSchemaForDump($rawSchema);
+    $json = json_encode($dump, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+
+    $outputFile = $filename ?? $command->getSchemaDumpFilename();
+    $outputPath = APP_DIR . '/dumps/' . $outputFile;
+
+    file_put_contents($outputPath, $json);
+
+    $tableCount = count($rawSchema['tables'] ?? []);
+    $climate->info("Exported schema ({$tableCount} tables) to $outputFile");
 }
 
 function dumpEpisodes(Airtable $airtable, string $table, CLImate $climate, EpisodeDataCommand $command, ?string $filename): void

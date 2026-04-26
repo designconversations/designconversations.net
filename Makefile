@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := help
 
 .PHONY: help install build build-drafts serve serve-drafts \
-        00-episode-data 00-dump test \
+        00-episode-data 00-dump 00-dump-schema test \
         01-build-episodes 01-build-episodes-force \
         02-encode-mp3s 02-encode-mp3s-force \
         03-tag-mp3s 03-tag-mp3s-force \
@@ -55,6 +55,9 @@ serve-drafts: ## Serve Jekyll site locally including drafts.
 
 00-dump: ## Dump all episode data to JSON backup.
 	php src/00-episode-data.php dump
+
+00-dump-schema: ## Dump Airtable base schema to JSON backup.
+	php src/00-episode-data.php dump-schema
 
 test: ## Run PHP unit tests.
 	cd src && ./vendor/bin/phpunit tests/
