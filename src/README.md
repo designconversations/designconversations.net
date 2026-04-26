@@ -86,6 +86,34 @@ AIRTABLE_TABLE=<your-table-name>
 
 ## Tools
 
+### Episode Data Management
+
+`00-episode-data.php` provides CLI access to Airtable episode records:
+
+```bash
+# List all episodes
+make 00-episode-data ARGS="list"
+
+# Show episode details
+make 00-episode-data ARGS="show 19"
+
+# Create a new episode
+make 00-episode-data ARGS="create 20 new_guest_id"
+
+# Update a field
+make 00-episode-data ARGS="update 19 title 'Guest Name: Episode subtitle'"
+make 00-episode-data ARGS="update 19 tags 'graphic-design,illustration'"
+make 00-episode-data ARGS="update 19 photoCredit 'Photographer Name'"
+
+# Delete an episode
+make 00-episode-data ARGS="delete 19"
+
+# List available fields
+make 00-episode-data ARGS="fields"
+```
+
+### Episode Processing Pipeline
+
 The following tools follow the general pattern of reading episode data
 from Airtable, and processing each episode record in some way.
 
@@ -122,6 +150,12 @@ Episodes are processed based on their `state` field:
 * **Draft** - Processed by tools
 * **Published** - Processed by tools; skipped if `includeInPodcastFeed` is true (use `--force` to override)
 
-## To Do (Deprecated)
+## Testing
 
-This section tracked initial development and is no longer maintained.
+Run PHP unit tests with:
+
+```bash
+make test
+```
+
+Tests are located in `src/tests/` and use PHPUnit 11.
