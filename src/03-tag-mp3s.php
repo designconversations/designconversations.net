@@ -61,7 +61,8 @@ foreach ($episodeRecords as $i => $episodeRecord) {
         $episodeGenre = 'Podcast';
         $episodeReleaseYear = $episodeRecord[F_DATE] ? date('Y', strtotime($episodeRecord[F_DATE])) : null;
         $episodePublisher = 'DesignConversations.net';
-        $episodeImagePathAndType = realpath(__DIR__ . '/mp3s/artwork.jpg') . ':BAND';
+        $episodeImageFile = realpath(__DIR__ . '/../assets/images/episodes/episode-' . sprintf('%03d', $episodeId) . '.jpg');
+        $episodeImagePathAndType = ($episodeImageFile ?: realpath(__DIR__ . '/mp3s/artwork.jpg')) . ':BAND';
         $episodeComment = formatEpisodeNotesAsComment($episodeRecord, FORMAT_COMMENTS_OPTION_STRIP_PARAGRAPHS);
 
         // Build the command to tag
